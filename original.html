@@ -1,0 +1,2454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>シークレットセミナー｜全70枚</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --w:#ffffff; --w2:#fafaf8; --gl:#e8e8e3; --gm:#9a9a92; --gd:#4a4a48; --k:#1a1a1a; --k2:#252525;
+  --g1:#0d3d28; --g2:#1a5d3a; --g3:#2d7d4f; --gp:#e8f1ea;
+  --y1:#d4a847; --y2:#f0c651; --hl:#fff200; --hls:#fff7a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a;font-family:'Noto Sans JP',sans-serif;word-break:keep-all;line-break:strict;overflow-wrap:normal}
+.stage{display:flex;flex-direction:column;align-items:center;padding:60px 20px;gap:60px}
+@media screen{.stage{zoom:0.5}}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--w2);box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+.slide-label{display:none}
+.top-strip{position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--g3),var(--g2) 50%,var(--g1));z-index:5}
+.bot-strip{position:absolute;bottom:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--g3),var(--g2) 50%,var(--g1))}
+.ch{position:absolute;top:40px;left:80px;display:flex;align-items:center;gap:18px;z-index:4}
+.ch .bar{width:8px;height:36px;background:var(--g2);border-radius:2px}
+.ch .title{font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.05em}
+.ch-sep{position:absolute;top:95px;left:80px;right:80px;height:1px;background:var(--gl)}
+.pgnum{position:absolute;bottom:18px;right:60px;font-size:16px;color:var(--gm);letter-spacing:0.1em;font-weight:500;z-index:5}
+  .pg-top{position:absolute;top:30px;right:60px;font-size:16px;color:var(--gm);letter-spacing:0.1em;font-weight:500;z-index:5}
+  .chapter-wrap .pg-top, .chapter-wrap+.pg-top{color:var(--y2)!important}
+.body-wrap{position:absolute;top:130px;left:0;right:0;bottom:50px;padding:30px 80px;display:flex;flex-direction:column}
+.mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 8px}
+.mark-s{background:linear-gradient(transparent 55%,var(--hl) 55%);padding:0 4px}
+.g{color:var(--g2)}
+.y{color:var(--y2)}
+
+/* ============ S1 タイトル ============ */
+.title-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at center, var(--w) 0%, var(--w2) 70%, var(--gl) 100%)}
+.title-bg{position:absolute;inset:0;overflow:hidden;opacity:0.04}
+.title-bg::before{content:"";position:absolute;top:-200px;left:-200px;width:800px;height:800px;border:120px solid var(--g2);border-radius:50%}
+.title-bg::after{content:"";position:absolute;bottom:-200px;right:-200px;width:800px;height:800px;border:120px solid var(--y1);border-radius:50%}
+.title-frame{position:absolute;inset:60px;border:2px solid var(--g2);pointer-events:none}
+.title-frame-corner{position:absolute;width:50px;height:50px;border:5px solid var(--y1)}
+.title-frame-corner.tl{top:40px;left:40px;border-right:none;border-bottom:none}
+.title-frame-corner.tr{top:40px;right:40px;border-left:none;border-bottom:none}
+.title-frame-corner.bl{bottom:40px;left:40px;border-right:none;border-top:none}
+.title-frame-corner.br{bottom:40px;right:40px;border-left:none;border-top:none}
+.title-badge{display:inline-block;padding:18px 64px;background:var(--k);color:var(--y2);font-size:30px;font-weight:900;letter-spacing:0.5em;border-radius:0;margin-bottom:90px;border:2px solid var(--y1);position:relative;z-index:2}
+.title-badge::before,.title-badge::after{content:"";position:absolute;top:50%;width:120px;height:1px;background:var(--y1)}
+.title-badge::before{right:calc(100% + 30px)}
+.title-badge::after{left:calc(100% + 30px)}
+.title-main{font-size:200px;font-weight:900;color:var(--k);letter-spacing:0.06em;line-height:1.1;margin-bottom:50px;position:relative;z-index:2}
+.title-main .g{color:var(--g2)}
+.title-main .mark{padding:0 16px}
+.title-sub{font-size:36px;font-weight:500;color:var(--gd);letter-spacing:0.3em;position:relative;z-index:2;margin-bottom:80px}
+.title-host{font-size:24px;color:var(--gm);letter-spacing:0.15em;position:relative;z-index:2;font-weight:500}
+.title-host .name{color:var(--k);font-weight:900;font-size:28px;margin-left:18px}
+
+/* ============ S2 目次（参考画像準拠） ============ */
+.toc-wrap{position:absolute;inset:0;padding:100px 100px;display:flex;flex-direction:column;align-items:center}
+.toc-outer{position:absolute;inset:50px;border:4px solid var(--g2)}
+.toc-inner{position:absolute;inset:62px;border:1px solid var(--g2);opacity:0.4}
+.toc-corner{position:absolute;width:60px;height:60px;border:5px solid var(--y1)}
+.toc-corner.tl{top:30px;left:30px;border-right:none;border-bottom:none}
+.toc-corner.tr{top:30px;right:30px;border-left:none;border-bottom:none}
+.toc-corner.bl{bottom:30px;left:30px;border-right:none;border-top:none}
+.toc-corner.br{bottom:30px;right:30px;border-left:none;border-top:none}
+.toc-title{font-size:120px;font-weight:900;color:var(--k);letter-spacing:0.08em;text-align:center;margin:30px 0 60px;position:relative;z-index:2}
+.toc-list{display:flex;flex-direction:column;gap:20px;width:100%;max-width:1500px;position:relative;z-index:2}
+.toc-item{display:grid;grid-template-columns:200px 1fr;background:var(--k2);height:88px;overflow:hidden}
+.toc-num{background:var(--y1);color:var(--w);font-size:44px;font-weight:900;display:flex;align-items:center;justify-content:center;letter-spacing:0.08em}
+.toc-text{color:var(--w);font-size:38px;font-weight:900;display:flex;align-items:center;padding:0 44px;letter-spacing:0.04em}
+
+/* ============ 章扉（黒×金番号） ============ */
+.chapter-wrap{position:absolute;inset:0;background:var(--k);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 100px;overflow:hidden}
+.chapter-wrap::before{content:"";position:absolute;top:0;left:-200px;width:600px;height:100%;background:linear-gradient(135deg,transparent,var(--g2) 40%,var(--g1) 60%,transparent);opacity:0.18;transform:skewX(-20deg)}
+.chapter-wrap::after{content:"";position:absolute;bottom:0;right:-200px;width:600px;height:100%;background:linear-gradient(45deg,transparent,var(--y1) 40%,var(--y2) 60%,transparent);opacity:0.1;transform:skewX(-20deg)}
+.chapter-outer{position:absolute;inset:50px;border:4px solid var(--y1);pointer-events:none}
+.chapter-inner{position:absolute;inset:62px;border:1px solid var(--y1);pointer-events:none;opacity:0.4}
+.chapter-corner{position:absolute;width:80px;height:80px;border:5px solid var(--y2)}
+.chapter-corner.tl{top:25px;left:25px;border-right:none;border-bottom:none}
+.chapter-corner.tr{top:25px;right:25px;border-left:none;border-bottom:none}
+.chapter-corner.bl{bottom:25px;left:25px;border-right:none;border-top:none}
+.chapter-corner.br{bottom:25px;right:25px;border-left:none;border-top:none}
+.chapter-label{font-size:32px;font-weight:500;color:var(--y2);letter-spacing:0.6em;margin-bottom:40px;position:relative;z-index:2}
+.chapter-num-row{display:flex;align-items:baseline;gap:36px;margin-bottom:50px;position:relative;z-index:2}
+.chapter-num-row .num{font-size:280px;font-weight:900;color:var(--y1);line-height:1;letter-spacing:-0.02em}
+.chapter-num-row .word{font-size:72px;font-weight:900;color:var(--w);line-height:1;letter-spacing:0.1em}
+.chapter-title{font-size:80px;font-weight:900;color:var(--w);letter-spacing:0.06em;line-height:1.35;text-align:center;position:relative;z-index:2;max-width:1500px}
+.chapter-title .y{color:var(--y2)}
+.chapter-title .mark-y{background:linear-gradient(transparent 60%,rgba(240,198,81,0.35) 60%);padding:0 10px}
+.chapter-sub{margin-top:40px;font-size:28px;font-weight:500;color:var(--gl);letter-spacing:0.2em;position:relative;z-index:2;max-width:1400px;text-align:center;line-height:1.6}
+
+/* ============ Q&A ============ */
+.qa-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 100px;display:flex;flex-direction:column}
+.qa-row{display:flex;align-items:flex-start;gap:36px;margin-bottom:40px}
+.qa-row.answer{margin-top:80px;align-items:center}
+.qa-mark{flex-shrink:0;width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:var(--w)}
+.qa-mark.q{background:var(--gl);color:var(--gm)}
+.qa-mark.a{background:var(--g2)}
+.qa-text-q{font-size:58px;font-weight:900;color:var(--gd);letter-spacing:0.04em;line-height:1.4;padding-top:24px}
+.qa-text-a{font-size:120px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.2}
+.qa-text-a .mark-a{background:linear-gradient(transparent 60%,var(--hls) 60%);padding:0 14px}
+.qa-reason{margin-top:50px;padding:36px 56px;background:var(--w);border-left:10px solid var(--g2);border-radius:6px;font-size:28px;font-weight:500;color:var(--gd);line-height:1.7;letter-spacing:0.03em;max-width:1500px;align-self:flex-end;box-shadow:0 4px 16px rgba(0,0,0,0.05)}
+.qa-reason .strong{color:var(--k);font-weight:900}
+
+/* ============ 信頼の理由（MCM） ============ */
+.trust-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 100px;display:flex;flex-direction:column}
+.trust-body{display:grid;grid-template-columns:1fr 60px 1.4fr;flex:1;align-items:center}
+.trust-logo{text-align:center}
+.trust-logo .logo{font-size:160px;font-weight:900;color:var(--k);letter-spacing:0.06em;margin-bottom:20px;font-family:'Noto Sans JP',sans-serif}
+.trust-logo .corp{font-size:22px;color:var(--gm);letter-spacing:0.1em;font-weight:700}
+.trust-divider{width:1px;height:80%;background:var(--gl);margin:0 auto}
+.trust-content{padding:0 30px}
+.trust-badge{display:inline-block;padding:14px 40px;background:linear-gradient(135deg,var(--g3),var(--g2));color:var(--w);font-size:28px;font-weight:900;letter-spacing:0.2em;border-radius:8px;margin-bottom:50px}
+.trust-list{display:flex;flex-direction:column;gap:30px;margin-bottom:60px}
+.trust-line{font-size:42px;font-weight:900;color:var(--k);letter-spacing:0.03em;display:flex;align-items:baseline;gap:14px}
+.trust-line::before{content:"●";color:var(--g2);font-size:24px;flex-shrink:0}
+.trust-line .hi{color:var(--y1);font-size:52px}
+.trust-seals{display:flex;gap:28px;justify-content:flex-start;margin-top:20px}
+.trust-seal{width:160px;height:160px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center}
+.trust-seal::before,.trust-seal::after{content:"";position:absolute;top:0;height:100%;width:24px;background:radial-gradient(circle at center,var(--y1) 1px,transparent 1.5px) 0 0 / 5px 12px repeat-y;opacity:0.95}
+.trust-seal::before{left:0}
+.trust-seal::after{right:0;transform:scaleX(-1)}
+.trust-seal .txt{font-size:20px;font-weight:900;color:var(--y1);line-height:1.4;letter-spacing:0.05em;z-index:1;padding:0 8px}
+
+/* ============ プラス・特典・受講ルール ============ */
+.plus-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%;max-width:1640px;margin:0 auto 50px}
+.plus-card{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:50px 48px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:center;min-height:340px}
+.plus-lbl{display:inline-block;padding:10px 28px;background:var(--gp);color:var(--g2);font-size:22px;font-weight:900;letter-spacing:0.04em;border-radius:50px;margin-bottom:32px;align-self:center}
+.plus-msg{font-size:34px;font-weight:900;color:var(--k);line-height:1.6;letter-spacing:0.04em}
+.plus-foot{text-align:center;font-size:36px;font-weight:900;color:var(--k);letter-spacing:0.04em}
+
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;width:100%;max-width:1640px}
+.rule{background:var(--w);border:2px solid var(--gl);border-radius:12px;padding:60px 40px 50px;text-align:center;position:relative}
+.rule::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--g2);border-radius:10px 10px 0 0}
+.rule-num{width:96px;height:96px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:54px;font-weight:900;margin:0 auto 36px}
+.rule-head{font-size:40px;font-weight:900;color:var(--k);line-height:1.45;letter-spacing:0.03em;margin-bottom:24px}
+.rule-sub{font-size:22px;color:var(--gd);letter-spacing:0.04em;line-height:1.7}
+
+.gift-wrap{display:flex;flex-direction:column;align-items:center;gap:50px}
+.gift-card{width:600px;padding:60px 50px;background:var(--w);border:3px dashed var(--g2);border-radius:16px;text-align:center;position:relative}
+.gift-card-tag{position:absolute;top:-22px;right:-22px;background:var(--y1);color:var(--k);padding:10px 24px;font-size:22px;font-weight:900;letter-spacing:0.1em;border-radius:6px;transform:rotate(8deg);box-shadow:0 6px 16px rgba(0,0,0,0.15)}
+.gift-icon{width:130px;height:130px;color:var(--g2);margin:0 auto 30px}
+.gift-name{font-size:40px;font-weight:900;color:var(--g2);letter-spacing:0.06em;margin-bottom:18px}
+.gift-note{font-size:22px;color:var(--gd);line-height:1.6}
+.warn{padding:22px 44px;background:var(--k);color:var(--w);font-size:30px;font-weight:900;letter-spacing:0.08em;border-radius:8px;display:inline-block}
+
+/* ============ 大文字宣言・センター系 ============ */
+.center-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 100px}
+.center-pre{font-size:38px;font-weight:500;color:var(--gd);letter-spacing:0.3em;margin-bottom:50px}
+.center-pre.line::before,.center-pre.line::after{content:"";display:inline-block;width:80px;height:1px;background:var(--gd);vertical-align:middle;margin:0 32px}
+.center-main{font-size:140px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.35}
+.center-main.s120{font-size:120px}
+.center-main.s100{font-size:100px}
+.center-main.s90{font-size:90px}
+.center-foot{margin-top:60px;font-size:32px;color:var(--gd);font-weight:500;letter-spacing:0.2em}
+.tag-line{display:inline-block;padding:22px 56px;background:var(--k);color:var(--w);font-size:30px;font-weight:900;letter-spacing:0.15em;border-radius:8px;margin-top:50px}
+
+/* ============ 究極条件（共通カード） ============ */
+.cond-card{background:var(--w);border:2px solid var(--gl);border-radius:12px;padding:32px 40px;box-shadow:0 4px 16px rgba(0,0,0,0.04);display:flex;align-items:center;gap:32px}
+.cond-num{flex-shrink:0;width:90px;height:90px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:900}
+.cond-text{flex:1}
+.cond-head{font-size:32px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.03em;margin-bottom:8px}
+.cond-sub{font-size:20px;color:var(--gm);line-height:1.6;letter-spacing:0.02em}
+
+/* ============ STEPフロー ============ */
+.step-flow{display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;gap:0;align-items:stretch;margin-top:40px}
+.step-card{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:40px 32px;text-align:center;display:flex;flex-direction:column}
+.step-card.final{background:var(--g2);border-color:var(--g2);border-top-color:var(--y1)}
+.step-num{font-size:24px;font-weight:900;color:var(--g2);letter-spacing:0.2em;margin-bottom:20px}
+.step-card.final .step-num{color:var(--y2)}
+.step-name{font-size:34px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.04em;margin-bottom:20px}
+.step-card.final .step-name{color:var(--w)}
+.step-desc{font-size:20px;color:var(--gd);line-height:1.7;letter-spacing:0.02em}
+.step-card.final .step-desc{color:var(--gp)}
+.step-arrow{text-align:center;align-self:center;font-size:48px;color:var(--g2);font-weight:900}
+
+/* ============ STEP個別詳細 ============ */
+.stepdetail-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 100px;display:flex;flex-direction:column}
+.stepdetail-head{display:flex;align-items:center;gap:30px;margin-bottom:50px}
+.stepdetail-num{width:140px;height:140px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:900;flex-shrink:0}
+.stepdetail-title{font-size:64px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3}
+.stepdetail-title .num{color:var(--g2);font-size:34px;font-weight:900;display:block;letter-spacing:0.2em;margin-bottom:6px}
+.stepdetail-body{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;flex:1;align-items:center}
+.stepdetail-list{display:flex;flex-direction:column;gap:28px}
+.stepdetail-line{font-size:32px;font-weight:700;color:var(--gd);line-height:1.7;letter-spacing:0.03em;padding:20px 36px;background:var(--w);border-left:6px solid var(--g3);border-radius:4px}
+.stepdetail-line .strong{color:var(--k);font-weight:900}
+.stepdetail-illust{display:flex;align-items:center;justify-content:center;padding:40px;background:var(--gp);border-radius:16px;height:100%;min-height:400px}
+.stepdetail-illust svg{width:100%;max-width:400px;height:auto}
+
+/* ============ ストーリーボックス ============ */
+.story-box{padding:50px 64px;background:var(--w);border-left:10px solid var(--g2);border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,0.06);max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.story-line{font-size:30px;font-weight:500;color:var(--gd);line-height:1.7;letter-spacing:0.03em}
+.story-line.last{color:var(--k);font-weight:900}
+
+/* ============ 比較表 ============ */
+.compare-table{display:grid;grid-template-columns:1fr 1.3fr 1.3fr;background:var(--w);border:2px solid var(--gl);border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.compare-h{padding:24px 20px;font-size:24px;font-weight:900;text-align:center;letter-spacing:0.06em;line-height:1.4}
+.compare-h.head{background:var(--gl);color:var(--gm)}
+.compare-h.bad{background:#3a3a3a;color:var(--w)}
+.compare-h.good{background:var(--g2);color:var(--w)}
+.compare-r{padding:22px 24px;font-size:22px;border-top:1px solid var(--gl);line-height:1.5}
+.compare-r.label{background:var(--w2);font-weight:900;color:var(--k);letter-spacing:0.04em}
+.compare-r.bad{color:var(--gm);text-align:center}
+.compare-r.bad .strong{color:var(--gd);font-weight:900}
+.compare-r.good{color:var(--k);text-align:center;background:var(--gp)}
+.compare-r.good .strong{color:var(--g2);font-weight:900}
+
+/* ============ 数値カード ============ */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.stat-card{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:50px 36px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)}
+.stat-lbl{font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:24px}
+.stat-big{font-size:120px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:16px}
+.stat-big .u{font-size:42px;margin-left:6px;vertical-align:8px}
+.stat-desc{font-size:24px;color:var(--gd);line-height:1.5;font-weight:700}
+
+/* ============ 7大特典リスト ============ */
+.benefit-list{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1700px;margin:0 auto}
+.benefit-item{display:flex;align-items:center;gap:28px;padding:28px 36px;background:var(--w);border:2px solid var(--gl);border-left:10px solid var(--g2);border-radius:8px}
+.benefit-num{flex-shrink:0;width:68px;height:68px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900}
+.benefit-text{font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.03em;line-height:1.4}
+.benefit-text .small{font-size:18px;color:var(--gm);font-weight:500;display:block;margin-top:4px}
+
+/* ============ 特典詳細スライド ============ */
+.bendetail-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:50px 100px;display:flex;flex-direction:column}
+.bendetail-head{display:flex;align-items:center;gap:36px;margin-bottom:50px}
+.bendetail-tag{padding:14px 32px;background:var(--y1);color:var(--w);font-size:24px;font-weight:900;letter-spacing:0.15em;border-radius:6px}
+.bendetail-num{font-size:42px;font-weight:900;color:var(--g2);letter-spacing:0.04em}
+.bendetail-title{font-size:64px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3;margin-bottom:40px}
+.bendetail-title .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 8px}
+.bendetail-body{flex:1;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+.bendetail-list{display:flex;flex-direction:column;gap:20px}
+.bendetail-line{font-size:30px;font-weight:700;color:var(--gd);line-height:1.7;letter-spacing:0.03em;display:flex;align-items:baseline;gap:16px;padding:18px 32px;background:var(--w);border-left:6px solid var(--g3);border-radius:4px}
+.bendetail-line::before{content:"✓";color:var(--g2);font-size:32px;font-weight:900;flex-shrink:0;line-height:1}
+.bendetail-line .strong{color:var(--k);font-weight:900}
+.bendetail-price{background:var(--k);color:var(--w);padding:60px 40px;border-radius:12px;text-align:center;height:fit-content}
+.bendetail-price .lbl{font-size:22px;font-weight:900;color:var(--y2);letter-spacing:0.2em;margin-bottom:24px}
+.bendetail-price .num{font-size:90px;font-weight:900;color:var(--w);line-height:1;margin-bottom:20px}
+.bendetail-price .num .u{font-size:36px;margin-left:4px;vertical-align:6px}
+.bendetail-price .strike{font-size:28px;color:var(--gm);text-decoration:line-through;text-decoration-color:var(--y2);text-decoration-thickness:3px}
+.bendetail-price .badge{display:inline-block;margin-top:18px;padding:10px 28px;background:var(--y1);color:var(--k);font-size:24px;font-weight:900;letter-spacing:0.15em;border-radius:6px}
+
+/* ============ クエスト報酬レベル ============ */
+.quest-row{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr 40px 1fr;gap:0;align-items:stretch;max-height:540px}
+.quest-step{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g3);border-radius:10px;padding:32px 22px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 16px rgba(0,0,0,0.05)}
+.quest-step.final{background:var(--g2);border-color:var(--g2);border-top-color:var(--y1);box-shadow:0 10px 30px rgba(26,93,58,0.3)}
+.quest-lvl{font-size:24px;font-weight:900;color:var(--gm);letter-spacing:0.1em;margin-bottom:10px}
+.quest-step.final .quest-lvl{color:var(--y2);font-size:34px}
+.quest-name{font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.05em;margin-bottom:24px}
+.quest-step.final .quest-name{color:var(--w)}
+.quest-amount{font-size:54px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:20px}
+.quest-amount .u{font-size:24px;margin-left:4px;vertical-align:6px}
+.quest-step.final .quest-amount{color:var(--y2)}
+.quest-desc{font-size:16px;color:var(--gm);line-height:1.7;letter-spacing:0.02em}
+.quest-step.final .quest-desc{color:var(--gp)}
+.quest-arrow{text-align:center;align-self:center;font-size:36px;color:var(--g2);font-weight:900}
+
+/* ============ CTA・QR ============ */
+.cta-qr-box{display:flex;align-items:center;gap:60px;padding:50px 64px;background:var(--w);border:3px solid var(--g2);border-radius:16px;box-shadow:0 12px 36px rgba(26,93,58,0.18);margin:0 auto}
+.cta-qr{width:260px;height:260px;background:repeating-linear-gradient(45deg,var(--k),var(--k) 8px,var(--w) 8px,var(--w) 16px);border:4px solid var(--k);border-radius:6px;position:relative;overflow:hidden;flex-shrink:0}
+.cta-qr::after{content:"QR";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--w);margin:80px;border-radius:4px;color:var(--k);font-size:42px;font-weight:900;letter-spacing:0.1em}
+.cta-side{flex:1;text-align:left}
+.cta-side .lbl{font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px}
+.cta-side .name{font-size:42px;font-weight:900;color:var(--k);letter-spacing:0.05em;margin-bottom:18px;line-height:1.3}
+.cta-side .id{font-size:24px;color:var(--gd);letter-spacing:0.1em;margin-bottom:20px}
+.cta-side .note{font-size:18px;color:var(--gm);line-height:1.6}
+
+/* ============ donut ============ */
+.donut-wrap{display:flex;align-items:center;gap:80px;justify-content:center}
+.donut{width:440px;height:440px;border-radius:50%;background:conic-gradient(var(--g2) 0% 46.7%,var(--gl) 46.7% 100%);position:relative;box-shadow:0 10px 32px rgba(0,0,0,0.08);flex-shrink:0}
+.donut::before{content:"";position:absolute;inset:60px;background:var(--w2);border-radius:50%}
+.donut-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.donut-num{font-size:100px;font-weight:900;color:var(--g2);line-height:1}
+.donut-num .pct{font-size:44px;margin-left:6px}
+.donut-lbl{margin-top:10px;font-size:22px;font-weight:900;color:var(--k);letter-spacing:0.1em}
+.donut-msg{font-size:48px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em}
+.donut-msg .num{color:var(--g2);font-size:90px;margin:0 8px;vertical-align:-8px}
+
+/* ============ 価格対比 ============ */
+.price-row{display:grid;grid-template-columns:1fr 80px 1fr 100px 1fr;gap:20px;align-items:center;background:var(--w);border:2px solid var(--gl);border-radius:12px;padding:32px 36px;margin-bottom:24px;box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+.price-box{text-align:center}
+.price-lbl{font-size:18px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:8px}
+.price-num{font-size:48px;font-weight:900;color:var(--k);line-height:1}
+.price-num .u{font-size:22px;margin-left:4px;vertical-align:4px}
+.price-num.now{color:var(--g2)}
+.price-arrow{text-align:center;font-size:48px;color:var(--gm);font-weight:900}
+.price-diff{text-align:center;background:var(--gp);border:2px solid var(--g2);border-radius:10px;padding:14px 12px}
+.price-diff .lbl{font-size:14px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:4px}
+.price-diff .num{font-size:36px;font-weight:900;color:var(--g2);line-height:1}
+.price-diff .num .u{font-size:16px;margin-left:4px}
+
+/* ============ flow steps ============ */
+.flow-row-4{display:grid;grid-template-columns:1fr 50px 1fr 50px 1fr 50px 1fr;gap:0;align-items:center}
+
+/* ============ 需給バランス ============ */
+.demand-vs{display:grid;grid-template-columns:1fr 160px 1fr;align-items:center}
+.demand-side{text-align:center;padding:50px}
+.demand-side.left{background:var(--gp);border-radius:16px 0 0 16px}
+.demand-side.right{background:var(--gl);border-radius:0 16px 16px 0}
+.demand-lbl{font-size:30px;font-weight:900;margin-bottom:24px;letter-spacing:0.06em}
+.demand-side.left .demand-lbl{color:var(--g2)}
+.demand-side.right .demand-lbl{color:var(--gm)}
+.demand-people{font-size:240px;font-weight:900;line-height:1;margin-bottom:24px}
+.demand-side.left .demand-people{color:var(--g2)}
+.demand-side.right .demand-people{color:var(--gm);font-size:110px;padding-top:60px}
+.demand-cap{font-size:22px;font-weight:900;letter-spacing:0.04em}
+.demand-side.left .demand-cap{color:var(--g2)}
+.demand-side.right .demand-cap{color:var(--gm)}
+.demand-symbol{text-align:center;font-size:100px;font-weight:900;color:var(--k);line-height:1}
+
+/* ============ wins/scale ============ */
+.scale-vs{display:grid;grid-template-columns:1fr 160px 1fr;align-items:stretch}
+.scale-side{text-align:center;padding:50px 40px;display:flex;flex-direction:column;justify-content:center}
+.scale-side.left{background:var(--gl);border-radius:16px 0 0 16px}
+.scale-side.right{background:var(--gp);border-radius:0 16px 16px 0}
+.scale-side .scale-label{font-size:28px;font-weight:900;margin-bottom:30px;letter-spacing:0.06em}
+.scale-side.left .scale-label{color:var(--gm)}
+.scale-side.right .scale-label{color:var(--g2)}
+.scale-people{font-size:140px;font-weight:900;line-height:1;margin-bottom:24px}
+.scale-people .u{font-size:44px;margin-left:6px;vertical-align:16px}
+.scale-side.left .scale-people{color:var(--gm)}
+.scale-side.right .scale-people{color:var(--g2)}
+.scale-result{font-size:28px;font-weight:900;letter-spacing:0.04em}
+.scale-side.left .scale-result{color:var(--gm)}
+.scale-side.right .scale-result{color:var(--g2)}
+.scale-symbol{text-align:center;align-self:center;font-size:72px;color:var(--k);font-weight:900}
+
+/* ============ ファイナル系 ============ */
+.urgent-box{padding:50px 64px;background:var(--k);border:3px solid var(--y2);border-radius:12px;text-align:center;max-width:1500px;margin:0 auto}
+.urgent-box .lead{font-size:28px;font-weight:900;color:var(--y2);letter-spacing:0.1em;margin-bottom:24px}
+.urgent-box .body-t{font-size:38px;font-weight:900;color:var(--w);line-height:1.5;letter-spacing:0.04em}
+.urgent-box .body-t .y{color:var(--y2)}
+
+/* ============ painスタイル ============ */
+.pain-num{display:inline-block;padding:10px 32px;background:var(--g2);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.2em;border-radius:50px;margin-bottom:40px}
+.pain-quote{font-size:80px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.55;text-align:center;margin-bottom:50px;position:relative;padding:0 70px}
+.pain-quote::before,.pain-quote::after{font-size:100px;color:var(--g2);font-weight:900;position:absolute;line-height:1}
+.pain-quote::before{content:"「";left:0;top:-10px}
+.pain-quote::after{content:"」";right:0;bottom:-30px}
+.pain-list{display:flex;flex-direction:column;gap:18px;width:100%;max-width:1200px;margin:0 auto 40px}
+.pain-line{font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.03em;padding:14px 32px;background:var(--w);border-left:6px solid var(--g3);border-radius:4px}
+.pain-line .strong{color:var(--k);font-weight:900}
+.pain-foot{font-size:34px;font-weight:900;color:var(--k);letter-spacing:0.04em;text-align:center}
+
+/* ============ build3 additions for slides 34-70 ============ */
+
+  :root{
+    --w:#ffffff; --w2:#fafaf8; --gl:#e8e8e3; --gm:#9a9a92; --gd:#4a4a48; --k:#1a1a1a;
+    --g1:#0d3d28; --g2:#1a5d3a; --g3:#2d7d4f; --gp:#e8f1ea;
+    --y1:#d4a847; --y2:#f0c651; --hl:#fff200; --hls:#fff7a8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    background:#1a1a1a;
+    font-family:'Noto Sans JP',sans-serif;
+    word-break:keep-all; line-break:strict; overflow-wrap:normal;
+  }
+  .stage{display:flex;flex-direction:column;align-items:center;padding:60px 20px;gap:60px}
+  @media screen { .stage{zoom:0.5} }
+  .slide{
+    width:1920px; height:1080px; position:relative; overflow:hidden;
+    background:var(--w2); box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  }
+
+  /* ===== 共通：上下グリーン帯 ===== */
+  .top-strip{position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--g3),var(--g2) 50%,var(--g1));z-index:5}
+  .bot-strip{position:absolute;bottom:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--g3),var(--g2) 50%,var(--g1))}
+
+  /* ===== 章ヘッダー ===== */
+  .ch{position:absolute;top:40px;left:80px;display:flex;align-items:center;gap:18px;z-index:4}
+  .ch .bar{width:8px;height:36px;background:var(--g2);border-radius:2px}
+  .ch .title{font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.05em}
+  .ch-sep{position:absolute;top:95px;left:80px;right:80px;height:1px;background:var(--gl)}
+
+  /* ===== 共通本体エリア ===== */
+  .body-wrap{position:absolute;top:130px;left:0;right:0;bottom:50px;padding:30px 80px;display:flex;flex-direction:column}
+  .body-title{font-size:72px;font-weight:900;color:var(--k);letter-spacing:0.03em;line-height:1.4;text-align:center;margin-bottom:70px}
+  .body-title .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 8px}
+  .body-title .g{color:var(--g2)}
+
+  /* ===== ページ番号 ===== */
+  .pg{position:absolute;bottom:18px;right:60px;font-size:16px;color:var(--gm);font-weight:500;letter-spacing:0.1em;z-index:5}
+
+  /* ===== 章扉（黒背景＋金枠） ===== */
+  .chapter-wrap{position:absolute;inset:0;background:var(--k);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 100px;overflow:hidden}
+  .chapter-outer{position:absolute;inset:50px;border:4px solid var(--y1);pointer-events:none}
+  .chapter-inner{position:absolute;inset:62px;border:1px solid var(--y1);pointer-events:none;opacity:0.4}
+  .chapter-corner{position:absolute;width:80px;height:80px;border:5px solid var(--y2)}
+  .chapter-label{font-size:32px;font-weight:500;color:var(--y2);letter-spacing:0.6em;margin-bottom:40px;position:relative;z-index:2}
+  .chapter-num-row{display:flex;align-items:baseline;gap:36px;margin-bottom:50px;position:relative;z-index:2}
+  .chapter-num{font-size:280px;font-weight:900;color:var(--y1);letter-spacing:0.04em;line-height:1}
+  .chapter-kanji{font-size:80px;font-weight:900;color:var(--w);letter-spacing:0.1em}
+  .chapter-title{font-size:72px;font-weight:900;color:var(--w);letter-spacing:0.06em;line-height:1.4;text-align:center;position:relative;z-index:2;max-width:1500px}
+  .chapter-sub{margin-top:40px;font-size:28px;font-weight:500;color:var(--gl);letter-spacing:0.2em;position:relative;z-index:2;max-width:1400px;text-align:center;line-height:1.6}
+
+  /* ===== タイトル系（中央大文字） ===== */
+  .title-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 100px;text-align:center}
+  .tc-pre{font-size:42px;font-weight:700;color:var(--gd);letter-spacing:0.2em;margin-bottom:60px}
+  .tc-pre::before,.tc-pre::after{content:"";display:inline-block;width:80px;height:1px;background:var(--gd);vertical-align:middle;margin:0 32px}
+  .tc-main{font-size:130px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.35;margin-bottom:60px}
+  .tc-main .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 10px}
+  .tc-main .g{color:var(--g2)}
+  .tc-foot{font-size:32px;color:var(--gd);font-weight:500;letter-spacing:0.2em}
+  .tc-foot .g{color:var(--g2);font-weight:900}
+
+  /* ===== 4カードレイアウト（個人ではできない理由） ===== */
+  .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-top:30px;align-items:stretch;height:900px;margin:0 auto;width:100%}
+  .nocard{
+    background:var(--w);border:2px solid var(--gl);border-radius:12px;
+    padding:80px 28px 50px;position:relative;text-align:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 6px 22px rgba(0,0,0,0.05);
+  }
+  .nocard-x{position:absolute;top:-32px;left:50%;transform:translateX(-50%);width:62px;height:62px;border-radius:50%;background:var(--gm);color:var(--w);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900;z-index:2}
+  .nocard-x::before{content:"×"}
+  .nocard-icon{width:160px;height:160px;margin-bottom:34px;display:flex;align-items:center;justify-content:center;color:var(--g2)}
+  .nocard-label{font-size:30px;font-weight:900;color:var(--k);line-height:1.45;letter-spacing:0.02em}
+  .nocard.dim{background:#3a3a3a;border-color:#3a3a3a;color:#777}
+  .nocard.dim .nocard-icon{color:#5a5a5a}
+  .nocard.dim .nocard-label{color:#9a9a92}
+  .nocard.dim .nocard-x{background:#5a5a5a}
+
+  /* ===== 「個人ではできない」詳細レイアウト ===== */
+  .det-wrap{position:absolute;top:170px;left:0;right:0;bottom:160px;padding:60px 100px;display:flex;flex-direction:column;justify-content:center}
+  .det-lines{display:flex;flex-direction:column;gap:36px;margin-bottom:50px}
+  .det-line{display:flex;align-items:center;gap:30px;font-size:46px;font-weight:900;color:var(--k);letter-spacing:0.02em}
+  .det-x{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--gm);color:var(--w);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900}
+  .det-x::before{content:"×"}
+  .det-chev{text-align:center;font-size:60px;color:var(--g2);line-height:1;margin-top:10px}
+  .det-chev::before{content:"▼"}
+  .det-illust{position:absolute;right:90px;top:34%;transform:translateY(-50%);width:280px;height:280px;opacity:0.95}
+  .det-bot{position:absolute;bottom:0;left:0;right:0;height:130px;background:linear-gradient(90deg,var(--g3) 0%,var(--g2) 50%,var(--g1) 100%);display:flex;align-items:center;justify-content:center}
+  .det-bot-text{font-size:52px;font-weight:900;color:var(--w);letter-spacing:0.04em}
+  .det-bot-text .y{color:var(--y2)}
+
+  /* ===== オブジェクション・オーバーレイ（一人でもできるんじゃね） ===== */
+  .obj-wrap{position:absolute;inset:0;background:rgba(13,30,20,0.92);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 120px;z-index:3}
+  .obj-pre{font-size:108px;font-weight:900;color:var(--w);margin-bottom:40px;letter-spacing:0.06em}
+  .obj-main{font-size:118px;font-weight:900;color:var(--y2);letter-spacing:0.04em;line-height:1.35}
+
+  /* ===== MCM 信頼の理由 ===== */
+  .trust-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 100px;display:flex;flex-direction:column}
+  .trust-body{display:grid;grid-template-columns:1fr 1px 1.4fr;flex:1;align-items:center;gap:0}
+  .trust-logo{text-align:center;padding:0 40px}
+  .trust-logo .logo-text{font-size:160px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1;margin-bottom:30px}
+  .trust-logo .sub{font-size:24px;font-weight:900;color:var(--g2);letter-spacing:0.3em}
+  .trust-logo .note{margin-top:30px;font-size:20px;color:var(--gm);letter-spacing:0.1em;line-height:1.6}
+  .trust-div{width:1px;height:80%;background:var(--gl);margin:0 auto}
+  .trust-content{padding:0 30px}
+  .trust-badge{display:inline-block;padding:14px 40px;background:linear-gradient(135deg,var(--g3),var(--g2));color:var(--w);font-size:28px;font-weight:900;letter-spacing:0.2em;border-radius:8px;margin-bottom:50px}
+  .trust-list{display:flex;flex-direction:column;gap:30px;margin-bottom:60px}
+  .trust-line{font-size:42px;font-weight:900;color:var(--k);letter-spacing:0.03em;display:flex;align-items:baseline;gap:14px}
+  .trust-line::before{content:"●";color:var(--g2);font-size:24px;flex-shrink:0}
+  .trust-line .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 4px}
+  .trust-seals{display:flex;gap:28px;justify-content:flex-start;margin-top:20px}
+  .trust-seal{width:160px;height:160px;border:6px double var(--y1);border-radius:50%;background:var(--w);display:flex;align-items:center;justify-content:center;text-align:center}
+  .trust-seal .txt{font-size:18px;font-weight:900;color:var(--g2);line-height:1.4;padding:10px}
+
+  /* ===== Q&A ===== */
+  .qa-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:80px 100px;display:flex;flex-direction:column}
+  .qa-row{display:flex;align-items:flex-start;gap:36px;margin-bottom:30px}
+  .qa-mark{flex-shrink:0;width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:var(--w)}
+  .qa-mark.q{background:var(--gm)}
+  .qa-mark.a{background:var(--g2)}
+  .qa-side{font-size:50px;font-weight:900;color:var(--gd);padding-top:30px;letter-spacing:0.04em}
+  .qa-question{margin-left:170px;font-size:78px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-top:20px}
+  .qa-answer{margin-left:170px;font-size:118px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.2;margin-top:10px}
+  .qa-answer .mark{background:linear-gradient(transparent 55%,var(--hl) 55%);padding:0 8px}
+  .qa-reason{margin-top:50px;padding:36px 56px;background:var(--w);border-left:10px solid var(--g2);border-radius:6px;font-size:30px;font-weight:500;color:var(--gd);line-height:1.7;letter-spacing:0.03em;max-width:1500px;align-self:flex-end;box-shadow:0 4px 16px rgba(0,0,0,0.05)}
+
+  /* ===== 抽選フロー タイムライン ===== */
+  .tl-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:50px 100px;display:flex;flex-direction:column;justify-content:center}
+  .tl-row{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:36px;align-items:end;margin-bottom:50px}
+  .tl-box{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:50px 30px 36px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+  .tl-box.hl{border:4px solid var(--g2);border-top:8px solid var(--g2)}
+  .tl-icon{width:200px;height:200px;margin:0 auto 28px;color:var(--k)}
+  .tl-lbl{font-size:36px;font-weight:900;color:var(--y1);letter-spacing:0.06em}
+  .tl-multi{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;gap:0}
+  .tl-arrow{text-align:center;font-size:50px;color:var(--g2);font-weight:900}
+  .tl-axis{position:relative;margin-top:30px;padding-top:30px;display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:36px;text-align:center}
+  .tl-axis::before{content:"";position:absolute;top:46px;left:8%;right:8%;height:3px;background:var(--gl)}
+  .tl-dot{width:36px;height:36px;border-radius:50%;background:linear-gradient(180deg,var(--g3),var(--g2));margin:0 auto;position:relative;z-index:2;box-shadow:0 0 0 6px var(--w)}
+  .tl-day{margin-top:18px;font-size:32px;font-weight:900;color:var(--k)}
+
+  /* ===== 縛りゼロ pills ===== */
+  .pills-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 180px;display:flex;flex-direction:column;justify-content:center;gap:36px}
+  .pill{background:var(--w);border:2px solid var(--gl);border-radius:8px;padding:42px 70px;font-size:42px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;box-shadow:0 6px 20px rgba(0,0,0,0.06);position:relative}
+  .pill .gn{color:var(--g2);font-size:60px;font-weight:900;background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 8px}
+  .conf{position:absolute;width:280px;height:280px;pointer-events:none;z-index:1}
+
+  /* ===== 自由な未来 ライフスタイル ===== */
+  .life-wrap{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;overflow:hidden}
+  .life-q{position:relative;overflow:hidden}
+  .life-q1{background:linear-gradient(135deg,#a8d8e0 0%,#5a8a98 60%,#2a4a58 100%)}
+  .life-q2{background:linear-gradient(135deg,#1a1410 0%,#3a2820 60%,#806040 100%)}
+  .life-q3{background:linear-gradient(135deg,#f8f0e8 0%,#e8d8c8 100%)}
+  .life-q4{background:linear-gradient(135deg,#3a2820 0%,#6a4830 100%)}
+  .life-overlay{position:absolute;inset:0;background:rgba(250,250,248,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 100px;text-align:center;z-index:2}
+  .life-frame{position:absolute;inset:50px;border:4px solid var(--y1);pointer-events:none}
+  .life-corner{position:absolute;width:80px;height:80px;border:5px solid var(--y2)}
+  .life-line1{font-size:74px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.5;margin-bottom:30px;display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:12px}
+  .life-tag{display:inline-block;padding:10px 36px;background:linear-gradient(135deg,var(--g3),var(--g2));color:var(--w);border-radius:8px;font-size:74px;font-weight:900}
+  .life-line2{font-size:88px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4}
+  .life-line2 .or{color:var(--g2)}
+  .life-line2 .mark{background:linear-gradient(transparent 55%,var(--hl) 55%);padding:0 8px}
+
+  /* ===== 募集枠 ===== */
+  .rec-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:100px 120px;display:flex;flex-direction:column;align-items:center;gap:50px}
+  .rec-q{font-size:62px;font-weight:900;color:var(--k);text-align:center;line-height:1.5;letter-spacing:0.02em;position:relative;padding:0 60px 50px}
+  .rec-q::after{content:"";position:absolute;bottom:-2px;left:10%;right:10%;height:2px;background:var(--gl)}
+  .rec-q-tip{position:relative;margin-top:-30px;width:0;height:0;border-left:24px solid transparent;border-right:24px solid transparent;border-top:32px solid var(--gl)}
+  .rec-box{width:100%;max-width:1500px;background:linear-gradient(135deg,var(--g3),var(--g2),var(--g1));border-radius:8px;padding:80px 60px;text-align:center;color:var(--w);font-size:130px;font-weight:900;letter-spacing:0.04em;line-height:1.1;box-shadow:0 20px 50px rgba(26,93,58,0.25)}
+  .rec-num{color:var(--y2);font-size:180px}
+
+  /* ===== 今回限り ===== */
+  .lim-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:60px 140px;display:flex;flex-direction:column;justify-content:center;gap:50px}
+  .lim-l1{font-size:96px;font-weight:900;color:var(--k);letter-spacing:0.02em;text-align:center;position:relative}
+  .lim-l1::before{content:"・・";position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-size:60px;letter-spacing:0.3em;color:var(--g2)}
+  .lim-l2{font-size:160px;font-weight:900;color:var(--g2);letter-spacing:0.04em;text-align:center;line-height:1;display:flex;justify-content:center}
+  .lim-l2 .underline{display:inline-block;background:linear-gradient(transparent 55%,var(--hl) 55%,var(--hl) 95%,transparent 95%);padding:0 20px}
+
+  /* ===== 有料化 ===== */
+  .paid-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:80px 120px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px}
+  .paid-warn{font-size:74px;font-weight:900;color:var(--k);letter-spacing:0.02em;text-align:center;display:flex;align-items:center;gap:30px;padding-bottom:20px;position:relative}
+  .paid-warn::after{content:"";position:absolute;bottom:0;left:5%;right:5%;height:2px;background:var(--gl)}
+  .paid-warn-tip{position:relative;margin-top:-20px;width:0;height:0;border-left:24px solid transparent;border-right:24px solid transparent;border-top:32px solid var(--gl)}
+  .paid-sign{display:inline-block;width:90px;height:90px;background:var(--y2);clip-path:polygon(50% 8%,95% 90%,5% 90%);position:relative;flex-shrink:0}
+  .paid-sign::after{content:"!";position:absolute;top:55%;left:50%;transform:translate(-50%,-50%);font-size:50px;font-weight:900;color:var(--k)}
+  .paid-box{width:100%;max-width:1640px;background:linear-gradient(135deg,var(--g3),var(--g2),var(--g1));border-radius:8px;padding:60px 30px;text-align:center;color:var(--w);font-size:88px;font-weight:900;letter-spacing:0.04em;line-height:1.2;box-shadow:0 16px 40px rgba(26,93,58,0.2)}
+  .paid-box .y{color:var(--y2)}
+
+  /* ===== CTA ===== */
+  .cta-wrap{position:absolute;top:170px;left:0;right:0;bottom:80px;padding:50px 80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+  .cta-title{font-size:78px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3;text-align:center}
+  .cta-title .g{color:var(--g2)}
+  .cta-title .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 10px}
+  .cta-qr-box{display:flex;align-items:center;gap:60px;padding:50px 64px;background:var(--w);border:3px solid var(--g2);border-radius:16px;box-shadow:0 12px 36px rgba(26,93,58,0.18)}
+  .cta-qr{width:280px;height:280px;background:repeating-linear-gradient(45deg,var(--k),var(--k) 8px,var(--w) 8px,var(--w) 16px);border:4px solid var(--k);border-radius:6px;position:relative;overflow:hidden;flex-shrink:0}
+  .cta-qr::after{content:"QR";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--w);margin:80px;border-radius:4px;color:var(--k);font-size:42px;font-weight:900;letter-spacing:0.1em}
+  .cta-side{text-align:left}
+  .cta-line-lbl{font-size:24px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px}
+  .cta-line-name{font-size:48px;font-weight:900;color:var(--k);letter-spacing:0.05em;margin-bottom:18px}
+  .cta-line-note{font-size:22px;color:var(--gd);line-height:1.6;font-weight:500}
+  .cta-tag{display:inline-block;padding:22px 56px;background:var(--k);color:var(--w);font-size:30px;font-weight:900;letter-spacing:0.15em;border-radius:8px}
+  .cta-tag .y{color:var(--y2)}
+
+  /* ===== 最終締め ===== */
+  .final-wrap{position:absolute;inset:0;background:radial-gradient(ellipse at center,#2a3a30 0%,var(--k) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 80px;color:var(--w)}
+  .final-frame{position:absolute;inset:60px;border:2px solid var(--y1);pointer-events:none}
+  .final-corner{position:absolute;width:60px;height:60px;border:5px solid var(--y2)}
+  .final-pre{font-size:32px;color:var(--y2);letter-spacing:0.4em;margin-bottom:60px;font-weight:500;position:relative;z-index:2}
+  .final-main{font-size:120px;font-weight:900;color:var(--w);letter-spacing:0.06em;line-height:1.4;margin-bottom:50px;position:relative;z-index:2}
+  .final-foot{font-size:30px;color:var(--gl);letter-spacing:0.2em;font-weight:500;line-height:1.7;max-width:1400px;position:relative;z-index:2}
+  .final-badge{margin-top:80px;padding:18px 56px;background:var(--y1);color:var(--k);font-size:30px;font-weight:900;letter-spacing:0.3em;position:relative;z-index:2}
+
+  /* ===== ヘルパー ===== */
+  .mark{background:linear-gradient(transparent 60%,var(--hl) 60%);padding:0 8px}
+  .g{color:var(--g2)}
+  .y{color:var(--y2)}
+
+  /* ===== 実績カード（ONE生徒6ヶ月実績） ===== */
+  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;flex:1;align-items:stretch;max-height:520px;margin-top:20px}
+  .proof-card{background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:60px 36px;text-align:center;display:flex;flex-direction:column;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,0.06)}
+  .proof-card.hl{background:linear-gradient(135deg,var(--g3),var(--g2),var(--g1));color:var(--w);border-color:var(--g2);border-top:8px solid var(--y1);box-shadow:0 14px 40px rgba(26,93,58,0.25);transform:scale(1.04)}
+  .proof-lbl{font-size:24px;font-weight:900;color:var(--g2);letter-spacing:0.2em;margin-bottom:30px}
+  .proof-card.hl .proof-lbl{color:var(--y2)}
+  .proof-big{font-size:140px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:22px}
+  .proof-big .u{font-size:42px;margin-left:6px;vertical-align:10px;font-weight:900}
+  .proof-card.hl .proof-big{color:var(--w)}
+  .proof-desc{font-size:24px;color:var(--gd);line-height:1.6;font-weight:700}
+  .proof-card.hl .proof-desc{color:var(--gp)}
+  .proof-foot{margin-top:50px;text-align:center;font-size:40px;font-weight:900;color:var(--k);letter-spacing:0.04em}
+
+</style>
+</head>
+<body>
+<div class="stage">
+<!-- ============================================================
+     第1章 オープニング（Slide 1-7）
+     ============================================================ -->
+
+<!-- ===== SLIDE 1：タイトル ===== -->
+<div class="slide">
+  <div class="title-wrap">
+    <div class="title-bg"></div>
+    <div class="title-frame"></div>
+    <div class="title-frame-corner tl"></div>
+    <div class="title-frame-corner tr"></div>
+    <div class="title-frame-corner bl"></div>
+    <div class="title-frame-corner br"></div>
+    <div class="title-badge">FOR ONLY YOU</div>
+    <h1 class="title-main"><span class="g">シークレット</span><br><span class="mark">セミナー</span></h1>
+    <div class="title-sub">非公開・限定招待者のみ</div>
+    </div>
+  <div class="pgnum">001</div>
+</div>
+
+<!-- ===== SLIDE 2：本日の流れ（目次） ===== -->
+<div class="slide">
+  <div class="toc-wrap">
+    <div class="toc-outer"></div>
+    <div class="toc-inner"></div>
+    <div class="toc-corner tl"></div>
+    <div class="toc-corner tr"></div>
+    <div class="toc-corner bl"></div>
+    <div class="toc-corner br"></div>
+    <h2 class="toc-title">本日の流れ</h2>
+    <div class="toc-list">
+      <div class="toc-item"><div class="toc-num">1 章</div><div class="toc-text">副業の現実と、3つの落とし穴</div></div>
+      <div class="toc-item"><div class="toc-num">2 章</div><div class="toc-text">「ある企画」と、圧倒的な実績</div></div>
+      <div class="toc-item"><div class="toc-num">3 章</div><div class="toc-text">なぜ、チームでやるのか</div></div>
+      <div class="toc-item"><div class="toc-num">4 章</div><div class="toc-text">すべて、解決する仕組み</div></div>
+      <div class="toc-item"><div class="toc-num">5 章</div><div class="toc-text">実践フローと、報酬の受取まで</div></div>
+      <div class="toc-item"><div class="toc-num">6 章</div><div class="toc-text">疑問の完全解消・特典・募集</div></div>
+    </div>
+  </div>
+  <div class="pgnum">002</div>
+</div>
+
+<!-- ===== SLIDE 3：章扉 第1章 ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner tl"></div>
+    <div class="chapter-corner tr"></div>
+    <div class="chapter-corner bl"></div>
+    <div class="chapter-corner br"></div>
+    <div class="chapter-label">CHAPTER  ONE</div>
+    <div class="chapter-num-row"><div class="num">1</div><div class="word">章</div></div>
+    <h2 class="chapter-title">副業の現実と、<br><span class="mark-y">3つの落とし穴</span></h2>
+    <div class="chapter-sub">なぜ多くの人が、副業で結果を出せないのか。<br>その答えと、突破口を、お伝えします。</div>
+  </div>
+  <div class="pgnum">003</div>
+</div>
+
+<!-- ===== SLIDE 4：本日お伝えしたいこと（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">本日、お伝えしたいこと</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="text-align:center;font-size:32px;font-weight:700;color:var(--gd);letter-spacing:0.1em;margin-bottom:30px">この1時間で、あなたに、お渡しするのは</div>
+    <h2 style="text-align:center;font-size:74px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.04em;margin-bottom:40px">
+      たった<span class="g"><span class="mark">数日の稼働で5〜100万円</span></span><br>収益化するノウハウを、<br>包みかくさず、お伝えします
+    </h2>
+    <div class="plus-grid" style="margin-top:20px;max-width:1500px">
+      <div class="plus-card" style="min-height:200px;padding:30px 36px">
+        <div class="plus-lbl">既にビジネスをされている方</div>
+        <div class="plus-msg" style="font-size:28px">もう1つ収入の柱が増え、<br><span class="mark-s">キャッシュフローが改善</span>します</div>
+      </div>
+      <div class="plus-card" style="min-height:200px;padding:30px 36px">
+        <div class="plus-lbl">これから副業を始めたい方</div>
+        <div class="plus-msg" style="font-size:28px">難しいスキルなしで、<br><span class="mark-s">短期間で成果を出せる</span>方法です</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">どちらの方にも、<span class="mark">"プラスアルファ"の価値</span>をお渡しします</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">004</div>
+</div>
+
+<!-- ===== SLIDE 5：受講ルール ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">受講にあたって</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:72px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-bottom:80px;line-height:1.3">
+      本日の受講ルール、<span class="g" style="font-size:88px">3</span>つ
+    </h2>
+    <div class="rules">
+      <div class="rule">
+        <div class="rule-num">1</div>
+        <div class="rule-head"><span class="mark-s">最後まで</span><br>参加すること</div>
+        <div class="rule-sub">途中退室は、<br>特典の対象外となります</div>
+      </div>
+      <div class="rule">
+        <div class="rule-num">2</div>
+        <div class="rule-head"><span class="mark-s">メモを取りながら</span><br>聞くこと</div>
+        <div class="rule-sub">後から見返せる状態に、<br>しておきましょう</div>
+      </div>
+      <div class="rule">
+        <div class="rule-num">3</div>
+        <div class="rule-head"><span class="mark-s">実際に手を動かして</span><br>実践すること</div>
+        <div class="rule-sub">手を動かした人だけが、<br>結果を変えられます</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">005</div>
+</div>
+
+<!-- ===== SLIDE 6：参加特典告知 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">参加特典について</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="font-size:36px;font-weight:700;color:var(--gd);letter-spacing:0.08em;text-align:center;margin-bottom:40px"><span class="g" style="font-weight:900;border-bottom:3px solid var(--g2);padding-bottom:4px">最後まで聞いた方</span>だけが手にできるもの</div>
+    <h2 style="text-align:center;font-size:80px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:60px">
+      <span class="mark">この手法は</span>、<br>セミナー終盤で完全公開します
+    </h2>
+    <div class="gift-card">
+      <div class="gift-card-tag">限　定</div>
+      <svg class="gift-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 12v10H4V12"/>
+        <path d="M2 7h20v5H2z"/>
+        <path d="M12 22V7"/>
+        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+      </svg>
+      <div class="gift-name">7大特典＋超スペシャルプレゼント</div>
+      <div class="gift-note">本日参加された方限定で、<br>すべて無料でお渡しします</div>
+    </div>
+    <div class="warn" style="margin-top:50px">途中で退席された方には、<span class="y">お渡しできません</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">006</div>
+</div>
+
+<!-- ===== SLIDE 7：では始めます ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="center-wrap">
+    <div class="center-pre line">準備はよろしいですか</div>
+    <div class="center-main" style="font-size:180px">それでは、<br><span class="g"><span class="mark">始めます</span></span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">007</div>
+</div>
+
+
+<!-- ============================================================
+     第1章のPREPコンテンツ
+     ============================================================ -->
+
+<!-- ===== SLIDE 8：本章のテーマ（PREP - P / NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 本章のテーマ</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="text-align:center;font-size:32px;font-weight:700;color:var(--gd);letter-spacing:0.1em;margin-bottom:30px">本章で、最初にお伝えしたい結論</div>
+    <h2 style="text-align:center;font-size:74px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.5;margin-bottom:40px">
+      多くの副業が失敗する理由は、<br>
+      <span class="g"><span class="mark">"3つの落とし穴"</span>を、<br>避けられていない</span>からです
+    </h2>
+    <div class="tag-line" style="align-self:center;font-size:26px">この章で、その正体と、抜け出す方法を、すべて公開します</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">008</div>
+</div>
+
+<!-- ===== SLIDE 9：時代背景（PREP - R） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 なぜ今、副業なのか</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:72px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:60px">
+      給料は上がらないのに、<br>
+      <span class="mark">生活コストだけが上がり続ける時代</span>
+    </h2>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-lbl">物 価 上 昇</div>
+        <div class="stat-big">+18<span class="u">%</span></div>
+        <div class="stat-desc">直近5年間の<br>消費者物価指数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-lbl">実 質 賃 金</div>
+        <div class="stat-big">▼<span style="font-size:90px">2.5</span><span class="u">%</span></div>
+        <div class="stat-desc">物価を差し引いた<br>実質収入の変化</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-lbl">老 後 不 安</div>
+        <div class="stat-big">2,000<span class="u">万</span></div>
+        <div class="stat-desc">年金だけでは<br>足りない金額</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:30px;color:var(--gm);letter-spacing:0.05em;margin-top:36px">※総務省統計局・金融庁レポートを参考に作成</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">009</div>
+</div>
+
+<!-- ===== SLIDE 10：副業当たり前データ（PREP - E） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 副業は、もはや当たり前</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:60px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:50px">
+      会社員の<span class="g" style="font-size:80px">2人に1人</span>が、<br>
+      副業に取り組む時代になりました
+    </h2>
+    <div class="donut-wrap">
+      <div class="donut">
+        <div class="donut-c">
+          <div class="donut-num">46.7<span class="pct">%</span></div>
+          <div class="donut-lbl">副業実施率</div>
+        </div>
+      </div>
+      <div style="max-width:600px">
+        <div class="donut-msg" style="margin-bottom:30px">会社員の<span class="num">5</span>割近くが、<br>すでに副業を開始</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;letter-spacing:0.03em">「やるかやらないか」の議論は、<br>もう終わっています。今は、<span style="font-weight:900;color:var(--k)">どれを選ぶか</span>の段階。</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">010</div>
+</div>
+
+<!-- ===== SLIDE 11：副業挑戦者の現実（PREP - E） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 副業挑戦者の、厳しい現実</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:52px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:36px">
+      ただし、<span class="mark">9割が結果を出せずに脱落</span>しています
+    </h2>
+    <div class="stat-grid">
+      <div class="stat-card" style="padding:30px 32px">
+        <div class="stat-lbl">3ヶ月以内脱落率</div>
+        <div class="stat-big" style="font-size:96px">90<span class="u">%</span></div>
+        <div class="stat-desc">大半が、結果を出せずに<br>諦めてしまう</div>
+      </div>
+      <div class="stat-card" style="padding:30px 32px">
+        <div class="stat-lbl">月5万円未満</div>
+        <div class="stat-big" style="font-size:96px">75<span class="u">%</span></div>
+        <div class="stat-desc">続けていても、<br>大きな成果が出ない</div>
+      </div>
+      <div class="stat-card" style="padding:30px 32px">
+        <div class="stat-lbl">必要な学習時間</div>
+        <div class="stat-big" style="font-size:96px">500<span class="u">h</span></div>
+        <div class="stat-desc">一般的な副業で求められる<br>習熟の目安</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:30px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:30px">
+      なぜ、ここまで脱落するのか？<br>
+      <span style="color:var(--gd);font-weight:700;font-size:24px">答えは、副業挑戦者が「本当に欲しているもの」と、現実のギャップにあります</span>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">011</div>
+</div>
+
+<!-- ===== SLIDE 12：3つの本音（図解 / NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 副業挑戦者の、3つの本音</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:48px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:30px">
+      副業を選ぶ人が、心の底で、<span class="mark">本当に欲しているもの</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1700px;margin:0 auto;width:100%">
+      <!-- Wish 1: Family time -->
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:flex-start;min-height:520px">
+        <div style="width:180px;height:180px;margin:0 auto 24px;background:var(--gp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:96px;height:96px">
+            <circle cx="9" cy="7" r="2.5"/>
+            <circle cx="15" cy="7" r="2.5"/>
+            <circle cx="6.5" cy="9.5" r="1.5"/>
+            <circle cx="17.5" cy="9.5" r="1.5"/>
+            <path d="M4 19v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/>
+            <path d="M9 14v6M15 14v6M6.5 14v5M17.5 14v5"/>
+          </svg>
+        </div>
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">願 い 1</div>
+        <div style="font-size:34px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.04em;margin-bottom:16px">家族との<br>時間が、欲しい</div>
+        <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:500;margin-top:auto">朝から晩まで働く生活から、<br>解放されたい</div>
+      </div>
+      <!-- Wish 2: Simple / Tired of complex -->
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:flex-start;min-height:520px">
+        <div style="width:180px;height:180px;margin:0 auto 24px;background:var(--gp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:90px;height:90px">
+            <rect x="6" y="2" width="12" height="20" rx="2"/>
+            <path d="M10 18h4"/>
+            <circle cx="12" cy="6" r="0.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">願 い 2</div>
+        <div style="font-size:34px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.04em;margin-bottom:16px">複雑なノウハウは、<br>もう、疲れた</div>
+        <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:500;margin-top:auto">スマホ一つで、シンプルに<br>完結する仕組みが、理想</div>
+      </div>
+      <!-- Wish 3: Income while resting -->
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:flex-start;min-height:520px">
+        <div style="width:180px;height:180px;margin:0 auto 24px;background:var(--gp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:96px;height:96px">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+            <text x="12" y="22" text-anchor="middle" font-size="6" font-weight="900" fill="currentColor" stroke="none">¥</text>
+          </svg>
+        </div>
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">願 い 3</div>
+        <div style="font-size:34px;font-weight:900;color:var(--k);line-height:1.4;letter-spacing:0.04em;margin-bottom:16px">手を止めても、<br>収入が止まらない</div>
+        <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:500;margin-top:auto">レバレッジが効く仕組みが、<br>欲しい</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">でも、現実はその真逆。<span class="mark">なぜか？</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">012</div>
+</div>
+
+<!-- ===== SLIDE 13：共通の壁＝努力＝利益の限界（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 全ての願いを阻む、ひとつの壁</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="text-align:center;font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.15em;margin-bottom:24px">3つの願いに、共通する、たった1つの壁</div>
+    <div style="font-size:108px;font-weight:900;color:var(--g2);letter-spacing:0.08em;line-height:1.1;margin-bottom:40px"><span class="mark">努力 ＝ 利益</span></div>
+    <div style="max-width:1500px;padding:36px 56px;background:var(--k);color:var(--w);border-radius:12px;text-align:center">
+      <div style="font-size:22px;font-weight:900;color:var(--y2);letter-spacing:0.2em;margin-bottom:18px">そ の 正 体</div>
+      <div style="font-size:30px;font-weight:900;line-height:1.55;letter-spacing:0.04em">
+        頑張った分しか、稼げない。<br>
+        <span class="y">学んだ時間 × 動いた時間 = 収入。</span><br>
+        だから、努力をやめた瞬間、収入も止まる。
+      </div>
+    </div>
+    <div style="text-align:center;font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:20px">この壁を、<span class="mark">どうやって越えるか</span>。それが、3つの落とし穴の話につながります</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">013</div>
+</div>
+
+<!-- ===== SLIDE 14：副業の3つの落とし穴 提示（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 副業の3つの落とし穴</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:48px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      多くの副業が、努力＝利益から抜けられない理由。<br>それは、<span class="g">3</span>つの<span class="mark">落とし穴</span>にハマるから
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1640px;margin:0 auto;width:100%">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">PITFALL 01</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">1</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px">事前知識を学ぶ<br>時間と労力が必要</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">プログラミング、動画編集、<br>マーケ、輸入転売…<br>習得まで数百時間</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">PITFALL 02</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">2</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px">仕組化・資産化が<br>難しい</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">自分が動かないと止まる。<br>結局、時間を切り売り<br>している状態</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">PITFALL 03</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">3</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px">手出しの資金が<br>必要</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">仕入資金、コンサル費用、<br>スクール費用…<br>始める前にお金がかかる</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:22px;font-weight:700;color:var(--gd);letter-spacing:0.04em;margin-top:28px">1つずつ、確認していきます</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">014</div>
+</div>
+
+<!-- ===== SLIDE 15：落とし穴① 事前知識（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 落とし穴①</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">1</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">PITFALL 01</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">事前知識を学ぶ、<span class="mark">時間と労力</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">よ く あ る 副 業 で は</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          ● プログラミング：800時間〜<br>
+          ● 動画編集：300時間〜<br>
+          ● Webマーケ：500時間〜<br>
+          ● 輸入転売：仕入れ＆販売ノウハウ
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">す る と、 こ う な る</div>
+        <div style="font-size:24px;color:var(--k);line-height:1.7;font-weight:700">
+          スキル習得まで <span class="mark-s">最低半年〜1年</span>。<br>
+          仕事と両立しながらは、<br>
+          現実的に厳しい。
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">必要なのは、<span class="mark">事前知識ゼロでも、すぐ始められる仕組み</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">015</div>
+</div>
+
+<!-- ===== SLIDE 16：落とし穴② 仕組化困難（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 落とし穴②</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">2</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">PITFALL 02</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">仕組化、<span class="mark">資産化が難しい</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">よ く あ る 副 業 で は</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          自分が動いた分だけ、報酬が出る。<br>
+          動かなくなった瞬間、<br>
+          ピタッと収入が止まる。
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">す る と、 こ う な る</div>
+        <div style="font-size:24px;color:var(--k);line-height:1.7;font-weight:700">
+          一生、自分が動き続ける必要。<br>
+          休めない、<span class="mark-s">資産化できない</span>、<br>
+          終わりが見えない。
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">必要なのは、<span class="mark">仕組み側が回ってくれる、ストック型のモデル</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">016</div>
+</div>
+
+<!-- ===== SLIDE 17：落とし穴③ 手出し資金（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 落とし穴③</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">3</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">PITFALL 03</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">手出しの<span class="mark">資金が必要</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">よ く あ る 副 業 で は</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          ● 物販：仕入資金<br>
+          ● コンサル受講料<br>
+          ● スクール費用<br>
+          ● 教材・ツール費
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">す る と、 こ う な る</div>
+        <div style="font-size:24px;color:var(--k);line-height:1.7;font-weight:700">
+          始める前に、まずお金が必要。<br>
+          結果が出るかも分からないのに、<br>
+          <span class="mark-s">先払いのリスク</span>を背負う。
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">必要なのは、<span class="mark">手出しゼロで、リスクなく始められる仕組み</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">017</div>
+</div>
+
+<!-- ===== SLIDE 18：落とし穴まとめ（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 落とし穴、まとめ</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <h2 style="text-align:center;font-size:46px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      副業で「努力＝利益」から抜け出せない人は、<br>必ず<span class="mark">この3つの落とし穴</span>にハマっています
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1500px;width:100%;margin-bottom:30px">
+      <div style="background:var(--w2);border:2px solid var(--gl);border-left:8px solid #c44;border-radius:8px;padding:22px 28px">
+        <div style="font-size:18px;font-weight:900;color:#c44;letter-spacing:0.15em;margin-bottom:8px">落とし穴 1</div>
+        <div style="font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.03em">事前知識の<br>時間と労力</div>
+      </div>
+      <div style="background:var(--w2);border:2px solid var(--gl);border-left:8px solid #c44;border-radius:8px;padding:22px 28px">
+        <div style="font-size:18px;font-weight:900;color:#c44;letter-spacing:0.15em;margin-bottom:8px">落とし穴 2</div>
+        <div style="font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.03em">仕組化・<br>資産化が難しい</div>
+      </div>
+      <div style="background:var(--w2);border:2px solid var(--gl);border-left:8px solid #c44;border-radius:8px;padding:22px 28px">
+        <div style="font-size:18px;font-weight:900;color:#c44;letter-spacing:0.15em;margin-bottom:8px">落とし穴 3</div>
+        <div style="font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.03em">手出しの<br>資金が必要</div>
+      </div>
+    </div>
+    <div class="tag-line">では、<span class="y">どうやって、抜け出すのか？</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">018</div>
+</div>
+
+<!-- ===== SLIDE 19：克服する3条件 提示（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 克服する、3つの条件</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:48px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:30px">
+      3つの落とし穴を、<span class="mark">完璧に避ける</span>には、<br>この<span class="g">3</span>つの条件が必要
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1640px;margin:0 auto;width:100%">
+      <div class="cond-card" style="flex-direction:column;text-align:center;padding:32px 24px">
+        <div class="cond-num" style="margin-bottom:18px">1</div>
+        <div class="cond-head" style="margin-bottom:12px;font-size:30px">事前知識<span class="mark-s">ゼロ</span>で<br>始められる</div>
+        <div class="cond-sub">難しいスキル不要。<br>シンプルな作業のみで進む</div>
+      </div>
+      <div class="cond-card" style="flex-direction:column;text-align:center;padding:32px 24px">
+        <div class="cond-num" style="margin-bottom:18px">2</div>
+        <div class="cond-head" style="margin-bottom:12px;font-size:30px">仕組み側が<br><span class="mark-s">回ってくれる</span></div>
+        <div class="cond-sub">自分が動き続けなくても、<br>結果が積み上がる</div>
+      </div>
+      <div class="cond-card" style="flex-direction:column;text-align:center;padding:32px 24px">
+        <div class="cond-num" style="margin-bottom:18px">3</div>
+        <div class="cond-head" style="margin-bottom:12px;font-size:30px">手出し<span class="mark-s">ゼロ</span>で<br>始められる</div>
+        <div class="cond-sub">仕入資金・スクール費用、<br>すべて不要</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:24px;font-weight:700;color:var(--gd);letter-spacing:0.04em;margin-top:24px">この3つを完璧に満たせば、副業は、<span class="mark-s">誰でも成果を出せる</span>領域に入ります</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">019</div>
+</div>
+
+<!-- ===== SLIDE 20：条件①② 詳細（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 条件① と ②</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:10px">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:32px 32px">
+        <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px">
+          <div style="width:64px;height:64px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900;flex-shrink:0">1</div>
+          <div>
+            <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.2em">CONDITION 01</div>
+            <div style="font-size:32px;font-weight:900;color:var(--k);letter-spacing:0.03em">事前知識<span class="mark-s">ゼロ</span>でOK</div>
+          </div>
+        </div>
+        <div style="font-size:22px;color:var(--gd);line-height:1.75;font-weight:700;padding:18px 22px;background:var(--gp);border-radius:8px">
+          パターン化された手順を、<br>
+          指示通りに進めるだけで、<br>
+          <span class="mark-s">スキル不要で成果が出る</span>。
+        </div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:32px 32px">
+        <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px">
+          <div style="width:64px;height:64px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900;flex-shrink:0">2</div>
+          <div>
+            <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.2em">CONDITION 02</div>
+            <div style="font-size:32px;font-weight:900;color:var(--k);letter-spacing:0.03em"><span class="mark-s">仕組み側</span>が回る</div>
+          </div>
+        </div>
+        <div style="font-size:22px;color:var(--gd);line-height:1.75;font-weight:700;padding:18px 22px;background:var(--gp);border-radius:8px">
+          自分は最小限の作業だけ。<br>
+          チームと仕組みが回り続け、<br>
+          <span class="mark-s">努力なしでステップアップ</span>。
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:24px;font-weight:700;color:var(--gd);letter-spacing:0.04em;margin-top:30px">そして、ここがいちばん大事 ↓</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">020</div>
+</div>
+
+<!-- ===== SLIDE 21：条件③ 詳細（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 条件③</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:var(--g2);color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">3</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.2em;margin-bottom:4px">CONDITION 03</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">手出し<span class="mark">ゼロ</span>で始められる</div>
+      </div>
+    </div>
+    <div style="max-width:1500px;padding:36px 56px;background:var(--w);border:3px solid var(--g2);border-radius:12px;box-shadow:0 8px 28px rgba(26,93,58,0.12)">
+      <div style="font-size:26px;font-weight:900;color:var(--g2);letter-spacing:0.1em;margin-bottom:18px">あなたが支払う費用は</div>
+      <div style="font-size:96px;font-weight:900;color:var(--g2);letter-spacing:0.06em;line-height:1.1">ゼ ロ 円</div>
+      <div style="margin-top:18px;font-size:24px;color:var(--gd);line-height:1.6;font-weight:700">
+        仕入資金もスクール費も、<span class="mark-s">運営が負担</span>。<br>
+        手出しがない＝失敗してもリスクゼロ。
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">この3つを<span class="mark">完璧に満たす副業</span>が、たった1つ、この世界に存在します</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">021</div>
+</div>
+
+<!-- ===== SLIDE 22：1章まとめ（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">1章 まとめ</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.15em;margin-bottom:24px">ここで、お伝えしたいこと</div>
+    <h2 style="text-align:center;font-size:64px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.5;margin-bottom:30px">
+      この<span class="g">3つを完璧に満たす</span>、<br><span class="mark">今回のシークレット企画</span>が、ここにあります
+    </h2>
+    <div class="tag-line">次の章で、<span class="y">その正体と、ありえない実績を、お伝えします</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">022</div>
+</div>
+
+<!-- ===== SLIDE 23：章扉 第2章（NEW タイトル：シークレット企画） ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner tl"></div>
+    <div class="chapter-corner tr"></div>
+    <div class="chapter-corner bl"></div>
+    <div class="chapter-corner br"></div>
+    <div class="chapter-label">CHAPTER  TWO</div>
+    <div class="chapter-num-row"><div class="num">2</div><div class="word">章</div></div>
+    <h2 class="chapter-title">「<span class="mark-y">シークレット企画</span>」の<br>正体と、圧倒的な実績</h2>
+    <div class="chapter-sub">3つの落とし穴を、完璧に避けられる場所。<br>その正体と、半年間で出た実績を、お伝えします。</div>
+  </div>
+  <div class="pgnum">023</div>
+</div>
+
+<!-- ===== SLIDE 24：思いつきますか？（チャット誘導 / 既存維持） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">2章 では、その企画とは</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="text-align:center;font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.12em;margin-bottom:24px">本章の結論をお話する前に、ひとつ、お聞きします</div>
+    <h2 style="text-align:center;font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.45;margin-bottom:30px">
+      <span class="mark">事前知識ゼロ</span>で始められて、<br>
+      <span class="mark">仕組み側が回ってくれて</span>、<br>
+      <span class="mark">手出し資金もゼロ</span>。<br>
+      <span class="g" style="font-size:48px">この3つを満たす副業、思いつきますか？</span>
+    </h2>
+    <div style="padding:18px 40px;background:var(--k);color:var(--w);border-radius:10px;font-size:22px;font-weight:900;letter-spacing:0.08em;line-height:1.5;text-align:center">
+      <span class="y">チャットに、思い浮かんだものを送ってみてください</span><br>
+      <span style="font-size:16px;color:var(--gl)">後から振り返ると、面白い答え合わせができます</span>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">024</div>
+</div>
+
+<!-- ===== SLIDE 25：それが、今回のシークレット企画です（NEW シンプル） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="center-wrap">
+    <div style="display:inline-block;padding:12px 40px;background:var(--g2);color:var(--w);font-size:26px;font-weight:900;letter-spacing:0.3em;border-radius:50px;margin-bottom:50px">そ の 答 え が、 こ れ</div>
+    <div style="font-size:120px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.2;margin-bottom:40px">これが、<br><span class="g"><span class="mark">今回のシークレット企画</span></span>です</div>
+    <div style="font-size:32px;font-weight:700;color:var(--gd);letter-spacing:0.04em;line-height:1.55;text-align:center">
+      まず、<span class="mark-s">実績</span>からお話します。<br>
+      その後で、<span class="mark-s">中身</span>を明かします
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">025</div>
+</div>
+
+<!-- ===== SLIDE 26：圧倒的実績 intro（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">2章 ONE生徒の圧倒的実績</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="text-align:center;font-size:32px;font-weight:700;color:var(--gd);letter-spacing:0.15em;margin-bottom:30px">— あれから半年。数字が、すべてを語ります —</div>
+    <h2 style="text-align:center;font-size:72px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      この企画で、<br><span class="mark">ONE生徒が出した実績</span>
+    </h2>
+    <div style="text-align:center;font-size:26px;font-weight:500;color:var(--gd);letter-spacing:0.04em;line-height:1.7">
+      事前知識ゼロから、仕組みに乗っただけ。<br>
+      手出し資金は1円もかかっていません。<br>
+      その結果が、これです ↓
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">026</div>
+</div>
+
+<!-- ===== SLIDE 27：実績① 170名以上の成功（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">2章 実績①</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="display:inline-block;padding:12px 36px;background:var(--g2);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.25em;border-radius:50px;margin-bottom:30px">RESULT 01 — 成功者数</div>
+    <div style="display:flex;align-items:flex-end;justify-content:center;gap:24px;margin-bottom:30px">
+      <div style="font-size:340px;font-weight:900;color:var(--g2);letter-spacing:-0.02em;line-height:0.9">170</div>
+      <div style="font-size:80px;font-weight:900;color:var(--g2);letter-spacing:0.05em;padding-bottom:24px">名 <span style="color:var(--y1)">+</span></div>
+    </div>
+    <div style="font-size:32px;font-weight:900;color:var(--k);letter-spacing:0.04em;text-align:center;line-height:1.55">
+      この半年で、ONE生徒の<br>
+      <span class="mark">買い付け成功者が、170名を突破</span>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">027</div>
+</div>
+
+<!-- ===== SLIDE 28：実績② 成功率95%（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">2章 実績②</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="display:inline-block;padding:12px 36px;background:var(--g2);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.25em;border-radius:50px;margin-bottom:30px">RESULT 02 — 成功率</div>
+    <div style="display:flex;align-items:flex-end;justify-content:center;gap:24px;margin-bottom:30px">
+      <div style="font-size:340px;font-weight:900;color:var(--g2);letter-spacing:-0.02em;line-height:0.9">95</div>
+      <div style="font-size:96px;font-weight:900;color:var(--g2);letter-spacing:0.05em;padding-bottom:24px">%</div>
+    </div>
+    <div style="font-size:32px;font-weight:900;color:var(--k);letter-spacing:0.04em;text-align:center;line-height:1.55">
+      取り組んだ人の、<span class="mark">ほぼ全員が成果に到達</span>。<br>
+      <span style="font-size:22px;color:var(--gd);font-weight:700">「副業の9割が脱落する」という常識を、覆しています</span>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">028</div>
+</div>
+
+<!-- ===== SLIDE 29：実績③ ステップアップ報酬（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">2章 実績③ — ステップアップ報酬</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:46px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:28px">
+      しかも、続ければ続けるほど、<br><span class="mark">報酬がステップアップ</span>していく
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr 40px 1fr;gap:0;align-items:stretch;max-width:1700px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:24px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">1 回 目</div>
+        <div style="font-size:54px;font-weight:900;color:var(--g2);line-height:1">5<span style="font-size:24px;margin-left:2px">万円</span></div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6;margin-top:10px">まずは1本、<br>感覚をつかむ</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:24px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">2 回 目</div>
+        <div style="font-size:54px;font-weight:900;color:var(--g2);line-height:1">10<span style="font-size:24px;margin-left:2px">万円</span></div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6;margin-top:10px">仕組みに慣れ、<br>報酬アップ</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:24px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">3〜4 回 目</div>
+        <div style="font-size:54px;font-weight:900;color:var(--g2);line-height:1">30<span style="font-size:24px;margin-left:2px">万円</span></div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6;margin-top:10px">上位モデルへ、<br>ステップアップ</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--g2);border:2px solid var(--g2);border-top:8px solid var(--y1);border-radius:10px;padding:24px 18px;text-align:center;box-shadow:0 10px 28px rgba(26,93,58,0.25)">
+        <div style="font-size:20px;font-weight:900;color:var(--y2);letter-spacing:0.15em;margin-bottom:10px">5 回 目 〜</div>
+        <div style="font-size:54px;font-weight:900;color:var(--w);line-height:1">100<span style="font-size:24px;margin-left:2px">万円</span></div>
+        <div style="font-size:16px;color:var(--gp);font-weight:500;line-height:1.6;margin-top:10px">最高ランクの<br>報酬到達</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:22px;font-weight:700;color:var(--gd);letter-spacing:0.04em;margin-top:24px">努力で勝つのではなく、<span class="mark-s">仕組みでステップアップ</span>していく設計です<br><span style="font-size:14px;color:var(--gm)">※参考。成果は実績に基づくモデルケースで、個人差があります。</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">029</div>
+</div>
+
+<!-- ===== SLIDE 30：その企画は、ロレクエ（NEW reveal） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="center-wrap">
+    <div style="font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.2em;margin-bottom:36px">— そして、この実績を生み出している企画は —</div>
+    <div style="display:inline-block;padding:14px 50px;background:var(--g2);color:var(--w);font-size:28px;font-weight:900;letter-spacing:0.4em;border-radius:50px;margin-bottom:40px">ROLE QUEST</div>
+    <div style="font-size:200px;font-weight:900;color:var(--g2);letter-spacing:0.06em;line-height:1;margin-bottom:30px">ロレクエ</div>
+    <div style="font-size:36px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.55;text-align:center">
+      その正体は、<br><span class="mark">ロレックスの「買い回り」</span>です
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">030</div>
+</div>
+
+<!-- ===== SLIDE 31：章扉 第3章 個人ではできない理由（NEW） ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner tl"></div>
+    <div class="chapter-corner tr"></div>
+    <div class="chapter-corner bl"></div>
+    <div class="chapter-corner br"></div>
+    <div class="chapter-label">CHAPTER  THREE</div>
+    <div class="chapter-num-row"><div class="num">3</div><div class="word">章</div></div>
+    <h2 class="chapter-title">なぜ、<br>「<span class="mark-y">チームで</span>」やるのか</h2>
+    <div class="chapter-sub">ロレックスの買い回りには、<br>個人では絶対に越えられない3つの壁があります。</div>
+  </div>
+  <div class="pgnum">031</div>
+</div>
+
+<!-- ===== SLIDE 32：個人で挑戦したら、どうなる ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">3章 想像してみてください</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.15em;margin-bottom:24px">あなたが、もし1人で挑戦したら</div>
+    <h2 style="text-align:center;font-size:78px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:36px">
+      ロレックスの買い回り。<br><span class="mark">個人で攻略できると、思いますか？</span>
+    </h2>
+    <div style="font-size:26px;font-weight:700;color:var(--gd);letter-spacing:0.04em;line-height:1.7;text-align:center">
+      結論から言うと、<span class="g" style="font-weight:900">個人では、ほぼ不可能</span>。<br>
+      その理由を、3つに分けてお伝えします
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">032</div>
+</div>
+
+<!-- ===== SLIDE 33：3つの壁 提示（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">3章 個人ではできない、3つの壁</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:46px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      ロレックスの買い回りには、<br><span class="mark">個人では越えられない3つの壁</span>があります
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1640px;margin:0 auto;width:100%">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">WALL 01</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">1</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px">大量の<br>仕入資金が必要</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">1本100〜200万円。<br>個人では現金で用意できない</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">WALL 02</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">2</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px">そもそも、<br>抽選で買えない</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">正規店は予約戦争。<br>個人で当選できるのは、年1回程度</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:24px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:18px">WALL 03</div>
+        <div style="font-size:80px;font-weight:900;color:#c44;line-height:1;margin-bottom:18px">3</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);line-height:1.5;letter-spacing:0.03em;margin-bottom:14px"><span style="color:#c44">1人1回</span>しか<br>できない</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">シリアルNoで追跡される。<br>2回目以降は、出禁リスク</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:22px;font-weight:700;color:var(--gd);letter-spacing:0.04em;margin-top:26px">1つずつ、現場のリアルを見ていきます</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">033</div>
+</div>
+
+<!-- ===== SLIDE 34：壁① 大量の仕入資金（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">3章 壁①</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">1</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">WALL 01</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">大量の<span class="mark">仕入資金</span>が必要</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">個 人 で や る な ら</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          ● 安いモデルでも 1本 <span style="color:#c44">100万円〜</span><br>
+          ● 上位モデルだと 1本 <span style="color:#c44">200万円〜</span><br>
+          ● しかも、1年間寝かせる<br>
+          　保有資金も必要
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">現 実 は こ う</div>
+        <div style="font-size:26px;color:var(--k);line-height:1.7;font-weight:700">
+          副業を始めたい人の手元に、<br>
+          <span class="mark-s">100万〜数百万の現金</span>は、<br>
+          ほぼ存在しない。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">034</div>
+</div>
+
+<!-- ===== SLIDE 35：壁② 抽選で買えない（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">3章 壁②</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">2</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">WALL 02</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em">そもそも、<span class="mark">抽選で買えない</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">個 人 で 抽 選 す る と</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          ● 1人=1店舗=1モデル<br>
+          ● 当選率は、ざっくり<span style="color:#c44">数%以下</span><br>
+          ● 平均 <span style="color:#c44">半年〜1年に1回</span> 当選<br>
+          ● 上位モデルは、もっと厳しい
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">現 実 は こ う</div>
+        <div style="font-size:26px;color:var(--k);line-height:1.7;font-weight:700">
+          1人でやると、<br>
+          <span class="mark-s">何ヶ月も無報酬で待つ</span>状態。<br>
+          副業として、成立しない。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">035</div>
+</div>
+
+<!-- ===== SLIDE 36：壁③ シリアル制限（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">3章 壁③</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <div style="display:flex;align-items:center;gap:32px;margin-bottom:30px">
+      <div style="width:120px;height:120px;background:#c44;color:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;flex-shrink:0">3</div>
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.2em;margin-bottom:4px">WALL 03</div>
+        <div style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.04em"><span class="mark">1人1回</span>しか、できない</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch">
+      <div style="padding:32px 36px;background:var(--gl);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--gm);letter-spacing:0.15em;margin-bottom:18px">あ ま り 知 ら れ て な い 事 実</div>
+        <div style="font-size:24px;color:var(--gd);line-height:1.7;font-weight:700">
+          ロレックスには <span style="color:#c44">シリアルNo</span> が刻まれ、<br>
+          誰が買ったか、追跡されている。<br>
+          同じ人が短期間で<br>
+          複数本さばくと、<span style="color:#c44">転売とみなされ、出禁</span>。
+        </div>
+      </div>
+      <div style="padding:32px 36px;background:var(--gp);border:2px solid var(--g2);border-radius:12px">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:18px">現 実 は こ う</div>
+        <div style="font-size:26px;color:var(--k);line-height:1.7;font-weight:700">
+          個人では、<br>
+          <span class="mark-s">人生で実質1〜2本</span>しか、<br>
+          回せない。副業として、回らない。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">036</div>
+</div>
+
+<!-- ===== SLIDE 37：いやー厳しい（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="center-wrap">
+    <div style="font-size:32px;font-weight:700;color:var(--gd);letter-spacing:0.2em;margin-bottom:32px">— ここまで聞いて —</div>
+    <div style="font-size:140px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.2;margin-bottom:30px">
+      「<span class="mark">いやー、厳しい</span>」<br><span style="font-size:80px">…って、思いますよね？</span>
+    </div>
+    <div style="font-size:28px;font-weight:700;color:var(--gd);letter-spacing:0.04em;line-height:1.6;text-align:center">
+      個人では、ほぼ不可能。<br>
+      だから、<span class="g" style="font-weight:900">チームでやる</span>のが、答えになります
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">037</div>
+</div>
+
+<!-- ===== SLIDE 38：章扉 第4章 チームの仕組み（NEW） ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner tl"></div>
+    <div class="chapter-corner tr"></div>
+    <div class="chapter-corner bl"></div>
+    <div class="chapter-corner br"></div>
+    <div class="chapter-label">CHAPTER  FOUR</div>
+    <div class="chapter-num-row"><div class="num">4</div><div class="word">章</div></div>
+    <h2 class="chapter-title">これら、<span class="mark-y">すべて解決</span>します<br>— ロレクエの仕組み —</h2>
+    <div class="chapter-sub">仕入資金、抽選当選、シリアル制限。<br>個人で越えられない3つの壁を、チームで完璧に解決します。</div>
+  </div>
+  <div class="pgnum">038</div>
+</div>
+
+<!-- ===== SLIDE 39：チームで解決の全体像（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 チームで解決</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:48px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.45;margin-bottom:30px">
+      個人では絶対不可能な3つの壁を、<br><span class="mark">チームでやれば、すべて解決</span>します
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 80px 1fr;gap:0;align-items:stretch;max-width:1700px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid #c44;border-radius:12px;padding:32px 28px">
+        <div style="font-size:22px;font-weight:900;color:#c44;letter-spacing:0.15em;margin-bottom:14px">個人だと、こうなる</div>
+        <ul style="font-size:24px;color:var(--gd);line-height:1.75;font-weight:700;list-style:none">
+          <li style="margin-bottom:8px">✕ 仕入資金 100〜200万必要</li>
+          <li style="margin-bottom:8px">✕ 抽選で半年に1回しか当たらない</li>
+          <li>✕ シリアル制限で1人1回まで</li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:60px;font-weight:900;color:var(--g2)">→</div>
+      <div style="background:var(--g2);border:2px solid var(--g2);border-top:8px solid var(--y1);border-radius:12px;padding:32px 28px;box-shadow:0 12px 32px rgba(26,93,58,0.2)">
+        <div style="font-size:22px;font-weight:900;color:var(--y2);letter-spacing:0.15em;margin-bottom:14px">ロレクエなら</div>
+        <ul style="font-size:24px;color:var(--w);line-height:1.75;font-weight:700;list-style:none">
+          <li style="margin-bottom:8px">○ 仕入資金は、運営が全額負担</li>
+          <li style="margin-bottom:8px">○ 当選は、チームで毎月発生</li>
+          <li>○ 参加者で分担、シリアル分散</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">次から、<span class="mark-s">あなたが何もしなくていい3つのこと</span>を順に</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">039</div>
+</div>
+
+<!-- ===== SLIDE 40：仕入資金、出さなくていい（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 あなたがしなくていいこと ①</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="display:inline-block;padding:10px 32px;background:var(--y1);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.25em;border-radius:50px;margin-bottom:30px">DON'T NEED 01</div>
+    <h2 style="text-align:center;font-size:88px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3;margin-bottom:36px">
+      <span class="g">仕入資金</span>、<br>あなたは<span class="mark">出さなくていい</span>
+    </h2>
+    <div style="max-width:1500px;padding:32px 56px;background:var(--w);border:3px solid var(--g2);border-radius:12px;text-align:center;box-shadow:0 8px 28px rgba(26,93,58,0.1)">
+      <div style="font-size:26px;color:var(--gd);line-height:1.75;font-weight:700">
+        1本100〜200万円の仕入資金は、<span class="mark-s">運営側が全額負担</span>します。<br>
+        あなたは、現金を1円も出す必要がありません。<br>
+        <span style="font-size:20px;color:var(--gm);font-weight:500;display:block;margin-top:10px">※ 当選時に運営が即金で買付・決済を行います</span>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">040</div>
+</div>
+
+<!-- ===== SLIDE 41：在庫、持たなくていい（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 あなたがしなくていいこと ②</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="display:inline-block;padding:10px 32px;background:var(--y1);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.25em;border-radius:50px;margin-bottom:30px">DON'T NEED 02</div>
+    <h2 style="text-align:center;font-size:88px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3;margin-bottom:36px">
+      <span class="g">在庫</span>、<br>あなたは<span class="mark">持たなくていい</span>
+    </h2>
+    <div style="max-width:1500px;padding:32px 56px;background:var(--w);border:3px solid var(--g2);border-radius:12px;text-align:center;box-shadow:0 8px 28px rgba(26,93,58,0.1)">
+      <div style="font-size:26px;color:var(--gd);line-height:1.75;font-weight:700">
+        買い付けた商品は、<span class="mark-s">その場で運営に引き渡し</span>。<br>
+        自宅に保管する必要も、<br>
+        売れ残りの心配も、一切ありません。
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">041</div>
+</div>
+
+<!-- ===== SLIDE 42：販売、しなくていい（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 あなたがしなくていいこと ③</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <div style="display:inline-block;padding:10px 32px;background:var(--y1);color:var(--w);font-size:22px;font-weight:900;letter-spacing:0.25em;border-radius:50px;margin-bottom:30px">DON'T NEED 03</div>
+    <h2 style="text-align:center;font-size:88px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.3;margin-bottom:36px">
+      <span class="g">販売</span>、<br>あなたは<span class="mark">しなくていい</span>
+    </h2>
+    <div style="max-width:1500px;padding:32px 56px;background:var(--w);border:3px solid var(--g2);border-radius:12px;text-align:center;box-shadow:0 8px 28px rgba(26,93,58,0.1)">
+      <div style="font-size:26px;color:var(--gd);line-height:1.75;font-weight:700">
+        販売ルートの確保、買い手探し、価格交渉、配送…<br>
+        <span class="mark-s">すべて運営チームが対応</span>します。<br>
+        あなたは「販売」に関わる必要が、一切ありません。
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">042</div>
+</div>
+
+<!-- ===== SLIDE 43：あなたがやるのは申込と受取だけ（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 あなたがやることは、たった2つ</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:56px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      では、あなたがやることは何か？<br><span class="mark">たった、2つだけ</span>です
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:1500px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:36px 40px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06)">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.2em;margin-bottom:14px">YOUR JOB 01</div>
+        <div style="font-size:108px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:14px">1</div>
+        <div style="font-size:38px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-bottom:12px">抽選に、応募</div>
+        <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:500">スマホから、運営の指示に沿って<br>正規店の抽選に応募するだけ</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:36px 40px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,0.06)">
+        <div style="font-size:22px;font-weight:900;color:var(--g2);letter-spacing:0.2em;margin-bottom:14px">YOUR JOB 02</div>
+        <div style="font-size:108px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:14px">2</div>
+        <div style="font-size:38px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-bottom:12px">当選したら、受取</div>
+        <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:500">運営が用意した買付資金で<br>商品を受取り、そのまま引渡</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:24px">これだけで、<span class="mark">数日で5〜100万円の報酬</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">043</div>
+</div>
+
+<!-- ===== SLIDE 44：チームでやるからこその力（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 チームでやるからこその、3つの力</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:42px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:30px">
+      なぜチームだと、個人ではできないことが、<span class="mark">できるのか</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1640px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:28px 24px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:20px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">POWER 01</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.03em;line-height:1.45;margin-bottom:14px">買付資金力</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">月5億規模の買付実績で、<br>当選即仕入が可能</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:28px 24px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:20px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">POWER 02</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.03em;line-height:1.45;margin-bottom:14px">シリアル分散</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">参加者ごとに別シリアル、<br>転売認定リスクがゼロ</div>
+      </div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:28px 24px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:20px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:14px">POWER 03</div>
+        <div style="font-size:28px;font-weight:900;color:var(--k);letter-spacing:0.03em;line-height:1.45;margin-bottom:14px">販売ルート</div>
+        <div style="font-size:18px;color:var(--gd);line-height:1.7;font-weight:500">運営独自の販売ルートで、<br>確実に高値で売り切る</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:30px">この3つの力が、<span class="mark">あなた1人で抱えなくていい理由</span>です</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">044</div>
+</div>
+
+<!-- ===== SLIDE 45：これなら、できそうじゃないですか?（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="center-wrap">
+    <div style="font-size:30px;font-weight:700;color:var(--gd);letter-spacing:0.2em;margin-bottom:32px">— ここまでの話を、整理すると —</div>
+    <div style="font-size:108px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.25;margin-bottom:30px">
+      これなら、<br><span class="g"><span class="mark">できそうじゃない</span></span>ですか？
+    </div>
+    <div style="font-size:28px;font-weight:700;color:var(--gd);letter-spacing:0.04em;line-height:1.6;text-align:center;max-width:1400px">
+      事前知識ゼロ。仕組みは運営が回す。手出しゼロ。<br>
+      あなたがやるのは、<span class="mark-s">「申込み」と「受取」</span>だけ。
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">045</div>
+</div>
+
+<!-- ===== SLIDE 46：4章まとめ（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">4章 まとめ</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <h2 style="text-align:center;font-size:60px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:36px">
+      これが、<span class="mark">ロレクエがチームでやる</span>、<br>本当の理由
+    </h2>
+    <div class="tag-line">次は、<span class="y">実際の参加から報酬受取までの流れ</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">046</div>
+</div>
+
+<!-- ===== SLIDE 47：章扉 第5章 実践フロー（NEW） ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner tl"></div>
+    <div class="chapter-corner tr"></div>
+    <div class="chapter-corner bl"></div>
+    <div class="chapter-corner br"></div>
+    <div class="chapter-label">CHAPTER  FIVE</div>
+    <div class="chapter-num-row"><div class="num">5</div><div class="word">章</div></div>
+    <h2 class="chapter-title">実践フローと、<br><span class="mark-y">報酬の受取</span>まで</h2>
+    <div class="chapter-sub">応募から、当選、買い付け、報酬の受取まで。<br>実際の流れを、すべてお見せします。</div>
+  </div>
+  <div class="pg-top">047</div>
+  <div class="pgnum">047</div>
+</div>
+
+<!-- ===== SLIDE 48：当選フロー詳細（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">5章 応募から、報酬受取までの流れ</div></div>
+  <div class="ch-sep"></div>
+  <div class="pg-top">048</div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:50px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      申込みから報酬受取まで、<span class="mark">最短7日</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 50px 1fr 50px 1fr 50px 1fr;gap:0;align-items:stretch;max-width:1700px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:28px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">STEP 01</div>
+        <div style="font-size:60px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:14px">①</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.03em;margin-bottom:10px">応 募</div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6">運営の指示に沿って<br>スマホから応募</div>
+        <div style="font-size:14px;color:var(--g2);font-weight:900;margin-top:10px">1日目</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:28px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">STEP 02</div>
+        <div style="font-size:60px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:14px">②</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.03em;margin-bottom:10px">当 選</div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6">運営の連絡で<br>当選確定</div>
+        <div style="font-size:14px;color:var(--g2);font-weight:900;margin-top:10px">〜3日目</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:28px 18px;text-align:center">
+        <div style="font-size:18px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:10px">STEP 03</div>
+        <div style="font-size:60px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:14px">③</div>
+        <div style="font-size:26px;font-weight:900;color:var(--k);letter-spacing:0.03em;margin-bottom:10px">来店・買付</div>
+        <div style="font-size:16px;color:var(--gm);font-weight:500;line-height:1.6">運営が用意した<br>買付資金で来店</div>
+        <div style="font-size:14px;color:var(--g2);font-weight:900;margin-top:10px">〜5日目</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--g2);border:2px solid var(--g2);border-top:8px solid var(--y1);border-radius:10px;padding:28px 18px;text-align:center;box-shadow:0 10px 28px rgba(26,93,58,0.25)">
+        <div style="font-size:18px;font-weight:900;color:var(--y2);letter-spacing:0.15em;margin-bottom:10px">STEP 04</div>
+        <div style="font-size:60px;font-weight:900;color:var(--y2);line-height:1;margin-bottom:14px">④</div>
+        <div style="font-size:26px;font-weight:900;color:var(--w);letter-spacing:0.03em;margin-bottom:10px">引渡＆精算</div>
+        <div style="font-size:16px;color:var(--gp);font-weight:500;line-height:1.6">運営に引き渡し、<br><span style="color:var(--y2);font-weight:900">当日 報酬精算</span></div>
+        <div style="font-size:14px;color:var(--y2);font-weight:900;margin-top:10px">〜7日目</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:24px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:30px">月末まで待つ必要、ありません。<span class="mark">買付実施日に、その場で精算</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">048</div>
+</div>
+
+<!-- ===== SLIDE 49：報酬の流れ + ステップアップ報酬（NEW） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">5章 報酬の払い方と、ステップアップ</div></div>
+  <div class="ch-sep"></div>
+  <div class="pg-top">049</div>
+  <div class="body-wrap" style="justify-content:center">
+    <h2 style="text-align:center;font-size:46px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:28px">
+      引き渡し当日に、その場で精算。<br>そして、続ければ続けるほど、<span class="mark">報酬は上がっていく</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr 30px 1fr;gap:0;align-items:stretch;max-width:1700px;margin:0 auto">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:20px 14px;text-align:center">
+        <div style="font-size:16px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:8px">1 回 目</div>
+        <div style="font-size:46px;font-weight:900;color:var(--g2);line-height:1">5<span style="font-size:20px;margin-left:2px">万円</span></div>
+        <div style="font-size:14px;color:var(--gm);font-weight:500;line-height:1.55;margin-top:10px">エントリーモデル</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:20px 14px;text-align:center">
+        <div style="font-size:16px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:8px">2 回 目</div>
+        <div style="font-size:46px;font-weight:900;color:var(--g2);line-height:1">10<span style="font-size:20px;margin-left:2px">万円</span></div>
+        <div style="font-size:14px;color:var(--gm);font-weight:500;line-height:1.55;margin-top:10px">仕組みに慣れ<br>報酬アップ</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:10px;padding:20px 14px;text-align:center">
+        <div style="font-size:16px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:8px">3〜4 回 目</div>
+        <div style="font-size:46px;font-weight:900;color:var(--g2);line-height:1">30<span style="font-size:20px;margin-left:2px">万円</span></div>
+        <div style="font-size:14px;color:var(--gm);font-weight:500;line-height:1.55;margin-top:10px">上位モデルへ<br>ステップアップ</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--g3)">→</div>
+      <div style="background:var(--g2);border:2px solid var(--g2);border-top:8px solid var(--y1);border-radius:10px;padding:20px 14px;text-align:center;box-shadow:0 10px 28px rgba(26,93,58,0.2)">
+        <div style="font-size:16px;font-weight:900;color:var(--y2);letter-spacing:0.15em;margin-bottom:8px">5 回 目 〜</div>
+        <div style="font-size:46px;font-weight:900;color:var(--w);line-height:1">100<span style="font-size:20px;margin-left:2px">万円</span></div>
+        <div style="font-size:14px;color:var(--gp);font-weight:500;line-height:1.55;margin-top:10px">最上位モデル<br>最高ランク報酬</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:20px 30px;background:var(--w);border:2px solid var(--g2);border-radius:10px;max-width:1500px;margin-left:auto;margin-right:auto">
+      <div style="font-size:20px;color:var(--gd);line-height:1.7;font-weight:700;text-align:center">
+        努力で勝つのではなく、<span class="mark-s">仕組みでステップアップ</span>。<br>
+        あなたの作業内容は変わらないのに、<span class="mark-s">報酬だけが、自然と上がっていく</span>設計です。
+      </div>
+    </div>
+    <div style="text-align:center;font-size:14px;color:var(--gm);margin-top:14px">※ ステップアップは実績ベースのモデルケースで、個人差があります</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">049</div>
+</div>
+
+<!-- ===== SLIDE 50：ONE生徒実績（再掲・top pgnum あり） ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">5章 あらためて、ONE生徒の実績</div></div>
+  <div class="ch-sep"></div>
+  <div class="pg-top">050</div>
+  <div class="body-wrap" style="justify-content:center;align-items:center">
+    <h2 style="text-align:center;font-size:52px;font-weight:900;color:var(--k);letter-spacing:0.04em;line-height:1.4;margin-bottom:32px">
+      この仕組みで、半年間で出た実績。<br><span class="mark">数字が、すべてを語ります</span>
+    </h2>
+    <div class="stat-grid">
+      <div class="stat-card" style="padding:30px 32px">
+        <div class="stat-lbl">買い付け成功</div>
+        <div class="stat-big" style="font-size:96px">170<span class="u">名+</span></div>
+        <div class="stat-desc">ONE生徒の<br>累計成功者数</div>
+      </div>
+      <div class="stat-card" style="padding:30px 32px;background:var(--g2);color:var(--w);border-color:var(--g2)">
+        <div class="stat-lbl" style="color:var(--y2)">成功率</div>
+        <div class="stat-big" style="font-size:96px;color:var(--w)">95<span class="u" style="color:var(--y2)">%</span></div>
+        <div class="stat-desc" style="color:var(--gp)">取り組んだ人の、<br>ほぼ全員が成功</div>
+      </div>
+      <div class="stat-card" style="padding:30px 32px">
+        <div class="stat-lbl">平均報酬</div>
+        <div class="stat-big" style="font-size:96px">8<span class="u">万円</span></div>
+        <div class="stat-desc">1本あたりの<br>平均手取り</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:30px;font-weight:900;color:var(--k);letter-spacing:0.04em;margin-top:30px">再現性は、<span class="mark">もう、証明されています</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pgnum">050</div>
+</div>
+
+<!-- ===== SLIDE 51：Q1 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">Q1 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark q">Q</div>
+      <div class="qa-side">質問</div>
+    </div>
+    <div class="qa-question">ほんとに、<br>無料なんですか？</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">051</div>
+</div>
+
+<!-- ===== SLIDE 52：A1 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">A1 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark a">A</div>
+      <div class="qa-side">回答</div>
+    </div>
+    <div class="qa-answer">はい、<span class="mark">無料</span>です。</div>
+    <div class="qa-reason">
+      参加費・教材費・登録料、すべてかかりません。
+      運営は、買い付け本数を増やすことで利益を出す仕組みのため、参加者から費用を取る必要がないんです。
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">052</div>
+</div>
+
+<!-- ===== SLIDE 53：Q2 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">Q2 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark q">Q</div>
+      <div class="qa-side">質問</div>
+    </div>
+    <div class="qa-question">抽選に当たる<br>確率は？</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">053</div>
+</div>
+
+<!-- ===== SLIDE 54：A2 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">A2 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark a">A</div>
+      <div class="qa-side">回答</div>
+    </div>
+    <div class="qa-answer"><span class="mark">半年に1回</span>程度です。</div>
+    <div class="qa-reason">
+      個人で抽選に申込む場合、平均すると半年に1回ほど当選します。
+      ロレクエでは、複数店舗・複数モデルを同時並行で狙うため、参加者全体としては毎月のように当選が発生しています。
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">054</div>
+</div>
+
+<!-- ===== SLIDE 55：Q3 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">Q3 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark q">Q</div>
+      <div class="qa-side">質問</div>
+    </div>
+    <div class="qa-question">転売と認定されて<br>違法にならないの？</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">055</div>
+</div>
+
+<!-- ===== SLIDE 56：A3 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">A3 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark a">A</div>
+      <div class="qa-side">回答</div>
+    </div>
+    <div class="qa-answer"><span class="mark">なりません</span>。</div>
+    <div class="qa-reason">
+      あなたが行うのは、抽選への申込みと当選後の商品引き渡しのみです。販売自体は、古物商許可を持つ運営会社が、正規の流通ルートで行います。あなたは「転売」をしている立場にならない設計になっています。
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">056</div>
+</div>
+
+<!-- ===== SLIDE 57：Q4 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">Q4 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark q">Q</div>
+      <div class="qa-side">質問</div>
+    </div>
+    <div class="qa-question">こういうのって、<br>怪しいバイト<br>じゃないの？</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">057</div>
+</div>
+
+<!-- ===== SLIDE 58：A4 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">A4 / 4</div></div>
+  <div class="ch-sep"></div>
+  <div class="qa-wrap">
+    <div class="qa-row">
+      <div class="qa-mark a">A</div>
+      <div class="qa-side">回答</div>
+    </div>
+    <div class="qa-answer"><span class="mark">大丈夫</span>です。</div>
+    <div class="qa-reason">
+      闇バイトのような身分証提出や、違法行為への加担は、一切ありません。やりとりは、すべて記録に残る公式LINEで完結します。安心して取り組める環境を、徹底して整えています。
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">058</div>
+</div>
+
+
+<!-- ============================================================
+     第8章 抽選フローと報酬（59-61）
+     ============================================================ -->
+
+<!-- ===== SLIDE 59：章扉 第8章 ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner" style="top:50px;left:50px;border-right:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="top:50px;right:50px;border-left:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="bottom:50px;left:50px;border-right:none;border-top:none"></div>
+    <div class="chapter-corner" style="bottom:50px;right:50px;border-left:none;border-top:none"></div>
+    <div class="chapter-label">CHAPTER 8</div>
+    <div class="chapter-num-row"><div class="chapter-num">8</div><div class="chapter-kanji">章</div></div>
+    <div class="chapter-title">参加してから、<br>報酬を受け取るまで</div>
+    <div class="chapter-sub">実際の流れを、ステップごとに見ていきましょう</div>
+  </div>
+  <div class="pg" style="color:var(--gl)">059</div>
+</div>
+
+<!-- ===== SLIDE 60：抽選申し込み後の流れ ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">抽選申し込み後の流れ</div></div>
+  <div class="ch-sep"></div>
+  <div class="tl-wrap">
+    <h2 style="font-size:54px;font-weight:900;color:var(--k);letter-spacing:0.03em;text-align:center;margin-bottom:60px;line-height:1.4">
+      申込みから報酬手渡しまで、<span class="mark">最短7日</span>
+    </h2>
+    <div class="tl-row">
+      <div class="tl-box">
+        <div class="tl-icon">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--k)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="50" cy="34" r="14"/>
+            <path d="M30 78 Q30 56 50 56 Q70 56 70 78"/>
+            <path d="M40 28 Q44 22 50 22 Q56 22 60 28" stroke="var(--g2)" stroke-width="3" fill="var(--g2)" fill-opacity="0.25"/>
+            <rect x="42" y="62" width="16" height="22" rx="2" fill="#FFF" stroke="var(--k)" stroke-width="2"/>
+            <rect x="45" y="65" width="10" height="14" fill="var(--g2)" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="tl-lbl">申し込み</div>
+      </div>
+      <div class="tl-box">
+        <div class="tl-icon">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--k)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="30" y="14" width="40" height="74" rx="6" fill="#FFF" stroke-width="3"/>
+            <rect x="34" y="22" width="32" height="50" fill="#F8F8F8" stroke-width="0"/>
+            <circle cx="50" cy="80" r="2.5" fill="var(--k)"/>
+            <circle cx="50" cy="47" r="13" fill="var(--g2)" stroke="var(--g1)"/>
+            <path d="M50 38 L52 45 L60 45 L54 50 L56 57 L50 53 L44 57 L46 50 L40 45 L48 45 Z" fill="var(--y2)"/>
+          </svg>
+        </div>
+        <div class="tl-lbl">当選</div>
+      </div>
+      <div class="tl-box hl">
+        <div class="tl-multi">
+          <div>
+            <div class="tl-icon" style="width:140px;height:140px">
+              <svg viewBox="0 0 100 100" fill="none" stroke="var(--k)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="50" cy="50" r="26" fill="#FFF" stroke-width="3"/>
+                <path d="M50 30 L50 50 L62 56" stroke="var(--g2)" stroke-width="3.5"/>
+                <rect x="44" y="14" width="12" height="14" rx="2" fill="#FFF"/>
+                <rect x="44" y="72" width="12" height="14" rx="2" fill="#FFF"/>
+              </svg>
+            </div>
+            <div class="tl-lbl" style="font-size:26px">来店・仕入れ<br>受け渡し</div>
+          </div>
+          <div class="tl-arrow">▶</div>
+          <div>
+            <div class="tl-icon" style="width:140px;height:140px">
+              <svg viewBox="0 0 100 100" fill="none" stroke="#9A7244" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 38 L40 30 L60 30 L70 38 Q72 44 65 50 L60 82 L40 82 L35 50 Q28 44 30 38 Z" fill="#F0D8A8"/>
+                <text x="50" y="65" font-size="22" font-weight="900" fill="#9A7244" text-anchor="middle">$</text>
+                <circle cx="78" cy="58" r="9" fill="var(--y2)" stroke="var(--y1)"/>
+                <circle cx="82" cy="68" r="9" fill="var(--y2)" stroke="var(--y1)"/>
+                <circle cx="78" cy="78" r="9" fill="var(--y2)" stroke="var(--y1)"/>
+              </svg>
+            </div>
+            <div class="tl-lbl" style="font-size:26px">報酬手渡し</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-axis">
+      <div><div class="tl-dot"></div><div class="tl-day">1日目</div></div>
+      <div><div class="tl-dot"></div><div class="tl-day">3日目</div></div>
+      <div><div class="tl-dot"></div><div class="tl-day">7日目</div></div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">060</div>
+</div>
+
+<!-- ===== SLIDE 61：報酬の仕組み詳細 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">報酬の仕組み</div></div>
+  <div class="ch-sep"></div>
+  <div class="body-wrap">
+    <h2 class="body-title">引き渡し当日に、<br><span class="mark">その場で報酬精算</span> → <span class="g">月末まで待つ必要なし</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 80px 1fr;gap:0;flex:1;align-items:center;max-height:520px">
+      <div style="background:var(--w);border:2px solid var(--gl);border-top:8px solid var(--g2);border-radius:12px;padding:50px 40px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.05)">
+        <div style="font-size:28px;font-weight:900;color:var(--g2);letter-spacing:0.15em;margin-bottom:30px">あなたの役割</div>
+        <div style="font-size:42px;font-weight:900;color:var(--k);line-height:1.5;margin-bottom:20px">商品を <span class="mark">運営に引き渡す</span> まで</div>
+        <div style="font-size:22px;color:var(--gd);line-height:1.7">そこから先は、<br>運営チームが販売を担当</div>
+      </div>
+      <div style="font-size:80px;font-weight:900;color:var(--g2);text-align:center">→</div>
+      <div style="background:linear-gradient(135deg,var(--g3),var(--g2));border-radius:12px;padding:50px 40px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:center;box-shadow:0 12px 30px rgba(26,93,58,0.2);color:var(--w)">
+        <div style="font-size:28px;font-weight:900;color:var(--y2);letter-spacing:0.15em;margin-bottom:30px">受け取り</div>
+        <div style="font-size:48px;font-weight:900;color:var(--w);line-height:1.5;margin-bottom:20px"><span style="color:var(--y2)">買付当日</span>に、その場で<br>口座へ精算</div>
+        <div style="font-size:22px;color:var(--gp);line-height:1.7">1本あたり<br>10万円〜200万円</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">061</div>
+</div>
+
+<!-- ============================================================
+     第9章 縛りゼロ、自由な未来（62-64）
+     ============================================================ -->
+
+<!-- ===== SLIDE 62：章扉 第9章 ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner" style="top:50px;left:50px;border-right:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="top:50px;right:50px;border-left:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="bottom:50px;left:50px;border-right:none;border-top:none"></div>
+    <div class="chapter-corner" style="bottom:50px;right:50px;border-left:none;border-top:none"></div>
+    <div class="chapter-label">CHAPTER 9</div>
+    <div class="chapter-num-row"><div class="chapter-num">9</div><div class="chapter-kanji">章</div></div>
+    <div class="chapter-title">縛りゼロ、<br>自由に広がる未来</div>
+    <div class="chapter-sub">あなたが、ロレクエで手にする可能性を、具体的にお見せします</div>
+  </div>
+  <div class="pg" style="color:var(--gl)">062</div>
+</div>
+
+<!-- ===== SLIDE 63：縛りゼロ、自由に広がる収入の可能性 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">縛りゼロ、自由に広がる収入の可能性</div></div>
+  <div class="ch-sep"></div>
+  <!-- ゴールド紙吹雪装飾 -->
+  <div style="position:absolute;top:140px;left:40px;width:280px;height:280px;pointer-events:none;z-index:1">
+    <svg viewBox="0 0 280 280" fill="none">
+      <circle cx="60" cy="40" r="5" fill="var(--y1)"/>
+      <circle cx="120" cy="20" r="4" fill="var(--y2)"/>
+      <circle cx="180" cy="60" r="5" fill="var(--y1)"/>
+      <circle cx="40" cy="120" r="4" fill="var(--y2)"/>
+      <circle cx="220" cy="180" r="5" fill="var(--y1)"/>
+      <circle cx="100" cy="200" r="4" fill="var(--y2)"/>
+      <circle cx="160" cy="140" r="5" fill="var(--y1)"/>
+      <rect x="50" y="80" width="8" height="3" fill="var(--y1)" transform="rotate(30 54 81)"/>
+      <rect x="140" y="100" width="8" height="3" fill="var(--y2)" transform="rotate(-20 144 101)"/>
+      <rect x="200" y="120" width="8" height="3" fill="var(--y1)" transform="rotate(45 204 121)"/>
+    </svg>
+  </div>
+  <div style="position:absolute;top:140px;right:40px;width:280px;height:280px;pointer-events:none;z-index:1;transform:scaleX(-1)">
+    <svg viewBox="0 0 280 280" fill="none">
+      <circle cx="60" cy="40" r="5" fill="var(--y1)"/>
+      <circle cx="120" cy="20" r="4" fill="var(--y2)"/>
+      <circle cx="180" cy="60" r="5" fill="var(--y1)"/>
+      <circle cx="40" cy="120" r="4" fill="var(--y2)"/>
+      <circle cx="220" cy="180" r="5" fill="var(--y1)"/>
+      <circle cx="100" cy="200" r="4" fill="var(--y2)"/>
+      <circle cx="160" cy="140" r="5" fill="var(--y1)"/>
+    </svg>
+  </div>
+  <div style="position:absolute;bottom:30px;left:0;width:200px;height:200px;pointer-events:none;z-index:1">
+    <svg viewBox="0 0 200 200" fill="none">
+      <path d="M0 200 L70 110 L20 70 L0 90 Z" fill="var(--y1)"/>
+      <path d="M20 70 L70 110 L45 60 L20 70 Z" fill="var(--y2)"/>
+      <circle cx="90" cy="130" r="5" fill="var(--y1)"/>
+      <circle cx="110" cy="110" r="4" fill="var(--y2)"/>
+      <circle cx="70" cy="90" r="5" fill="var(--y1)"/>
+    </svg>
+  </div>
+  <div style="position:absolute;bottom:30px;right:0;width:200px;height:200px;pointer-events:none;z-index:1;transform:scaleX(-1)">
+    <svg viewBox="0 0 200 200" fill="none">
+      <path d="M0 200 L70 110 L20 70 L0 90 Z" fill="var(--y1)"/>
+      <path d="M20 70 L70 110 L45 60 L20 70 Z" fill="var(--y2)"/>
+      <circle cx="90" cy="130" r="5" fill="var(--y1)"/>
+      <circle cx="110" cy="110" r="4" fill="var(--y2)"/>
+    </svg>
+  </div>
+  <div class="pills-wrap">
+    <div class="pill">単発でも「<span class="gn">10万・20万</span>」と大きく稼げるチャンス！</div>
+    <div class="pill">応募 → 当選 → 買い付け実施で、その日 <span class="gn">1,000</span> 円が即日精算！</div>
+    <div class="pill">ONE生徒の実績で、年 <span class="gn">50万〜100万</span> の副収入が現実に！</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">063</div>
+</div>
+
+<!-- ===== SLIDE 64：自由な場所と時間とお金で理想の未来 ===== -->
+<div class="slide">
+  <div class="life-wrap">
+    <div class="life-q life-q1">
+      <svg viewBox="0 0 480 320" style="width:100%;height:100%" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="sky64" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A8E0F0"/><stop offset="0.6" stop-color="#5DC5E3"/><stop offset="1" stop-color="#2A6FA8"/></linearGradient></defs>
+        <rect width="480" height="320" fill="url(#sky64)"/>
+        <path d="M0 140 Q80 124 160 140 Q240 156 320 124 Q400 92 480 110 L480 320 L0 320 Z" fill="#3A6A50" opacity="0.6"/>
+        <path d="M0 200 Q120 184 240 200 Q360 216 480 192 L480 320 L0 320 Z" fill="#1F4F8A"/>
+        <ellipse cx="240" cy="260" rx="50" ry="10" fill="#FFF" opacity="0.6"/>
+        <path d="M216 252 L264 252 L258 264 L222 264 Z" fill="#FFF"/>
+        <rect x="237" y="200" width="3" height="52" fill="#FFF"/>
+        <path d="M240 200 L262 240 L240 240 Z" fill="#FFF"/>
+      </svg>
+    </div>
+    <div class="life-q life-q2">
+      <svg viewBox="0 0 480 320" style="width:100%;height:100%" preserveAspectRatio="xMidYMid slice">
+        <rect width="480" height="320" fill="#2A1A12"/>
+        <ellipse cx="240" cy="220" rx="200" ry="50" fill="#7A5640" opacity="0.6"/>
+        <ellipse cx="240" cy="210" rx="100" ry="20" fill="#FFF"/>
+        <ellipse cx="240" cy="206" rx="70" ry="13" fill="#D8C8B0"/>
+        <circle cx="240" cy="194" r="18" fill="#A07050"/>
+        <path d="M320 100 L320 200 L350 200 L350 170 L380 170 L380 200 L410 200 L410 100 Z" fill="#7A2024" opacity="0.7"/>
+        <circle cx="140" cy="80" r="8" fill="#FFE890" filter="blur(2px)"/>
+        <circle cx="100" cy="60" r="6" fill="#FFE890" filter="blur(1px)"/>
+      </svg>
+    </div>
+    <div class="life-q life-q3">
+      <svg viewBox="0 0 480 320" style="width:100%;height:100%" preserveAspectRatio="xMidYMid slice">
+        <rect width="480" height="320" fill="#F8F0E8"/>
+        <rect x="30" y="100" width="100" height="140" fill="#D08888" rx="6"/>
+        <rect x="140" y="80" width="100" height="160" fill="#80B8E0" rx="6"/>
+        <rect x="250" y="110" width="100" height="130" fill="#90C898" rx="6"/>
+        <rect x="360" y="90" width="100" height="150" fill="#E0B888" rx="6"/>
+        <path d="M55 100 L55 80 Q55 60 80 60 Q105 60 105 80 L105 100" stroke="#666" stroke-width="4" fill="none"/>
+        <path d="M165 80 L165 60 Q165 40 190 40 Q215 40 215 60 L215 80" stroke="#666" stroke-width="4" fill="none"/>
+        <path d="M275 110 L275 90 Q275 70 300 70 Q325 70 325 90 L325 110" stroke="#666" stroke-width="4" fill="none"/>
+        <path d="M385 90 L385 70 Q385 50 410 50 Q435 50 435 70 L435 90" stroke="#666" stroke-width="4" fill="none"/>
+      </svg>
+    </div>
+    <div class="life-q life-q4">
+      <svg viewBox="0 0 480 320" style="width:100%;height:100%" preserveAspectRatio="xMidYMid slice">
+        <rect width="480" height="320" fill="#3A2820"/>
+        <rect x="40" y="200" width="180" height="80" fill="#FFF" stroke="#888" stroke-width="2"/>
+        <line x1="60" y1="225" x2="200" y2="225" stroke="#1a5d3a" stroke-width="3"/>
+        <line x1="60" y1="240" x2="200" y2="240" stroke="#1a5d3a" stroke-width="3"/>
+        <line x1="60" y1="255" x2="160" y2="255" stroke="#1a5d3a" stroke-width="3"/>
+        <ellipse cx="380" cy="240" rx="80" ry="50" fill="#F8B0C8"/>
+        <ellipse cx="332" cy="232" rx="14" ry="20" fill="#F8B0C8"/>
+        <circle cx="316" cy="222" r="5" fill="#000"/>
+        <circle cx="370" cy="190" r="9" fill="#3A3A3A"/>
+        <circle cx="100" cy="120" r="24" fill="var(--y2)"/>
+        <circle cx="140" cy="120" r="24" fill="var(--y2)"/>
+        <circle cx="120" cy="148" r="24" fill="var(--y2)"/>
+      </svg>
+    </div>
+  </div>
+  <div class="life-overlay">
+    <div class="life-frame"></div>
+    <div class="life-corner" style="top:50px;left:50px;border-right:none;border-bottom:none"></div>
+    <div class="life-corner" style="top:50px;right:50px;border-left:none;border-bottom:none"></div>
+    <div class="life-corner" style="bottom:50px;left:50px;border-right:none;border-top:none"></div>
+    <div class="life-corner" style="bottom:50px;right:50px;border-left:none;border-top:none"></div>
+    <div class="life-line1">自由な<span class="life-tag">場所</span>と<span class="life-tag">時間</span>と<span class="life-tag">お金</span>で</div>
+    <div class="life-line2"><span class="mark">理想の未来</span>を実現しましょう！</div>
+  </div>
+  <div class="pg" style="color:var(--gm);z-index:5">064</div>
+</div>
+
+<!-- ============================================================
+     第10章 募集枠と最終案内（65-70）
+     ============================================================ -->
+
+<!-- ===== SLIDE 65：章扉 第10章 ===== -->
+<div class="slide">
+  <div class="chapter-wrap">
+    <div class="chapter-outer"></div>
+    <div class="chapter-inner"></div>
+    <div class="chapter-corner" style="top:50px;left:50px;border-right:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="top:50px;right:50px;border-left:none;border-bottom:none"></div>
+    <div class="chapter-corner" style="bottom:50px;left:50px;border-right:none;border-top:none"></div>
+    <div class="chapter-corner" style="bottom:50px;right:50px;border-left:none;border-top:none"></div>
+    <div class="chapter-label">CHAPTER 10 / FINAL</div>
+    <div class="chapter-num-row"><div class="chapter-num">10</div><div class="chapter-kanji">章</div></div>
+    <div class="chapter-title">最後に、<br>大切なお知らせ</div>
+    <div class="chapter-sub">募集枠、特典、そして — あなたの行動が、未来を変える</div>
+  </div>
+  <div class="pg" style="color:var(--gl)">065</div>
+</div>
+
+<!-- ===== SLIDE 66：募集枠 + 先着150名限定 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">募集枠</div></div>
+  <div class="ch-sep"></div>
+  <div class="rec-wrap">
+    <div class="rec-q">
+      応募するだけで1,000円は、<br>さすがにこの人数しか対応ため
+    </div>
+    <div class="rec-q-tip"></div>
+    <div class="rec-box">先着<span class="rec-num">150</span>名限定</div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg" style="color:var(--gl)">066</div>
+</div>
+
+<!-- ===== SLIDE 68：今後、有料化する可能性 ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">今後、有料化する可能性</div></div>
+  <div class="ch-sep"></div>
+  <div class="paid-wrap">
+    <div class="paid-warn">
+      <span class="paid-sign"></span>本来は年間5万円のサービスです<span class="paid-sign"></span>
+    </div>
+    <div class="paid-warn-tip"></div>
+    <div class="paid-box">完全無料で参加できるのは<span class="y">今回だけ</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg" style="color:var(--gl)">067</div>
+</div>
+
+<!-- ===== SLIDE 69：最終CTA / LINE QR ===== -->
+<div class="slide">
+  <div class="top-strip"></div>
+  <div class="ch"><div class="bar"></div><div class="title">行動するのは、今です</div></div>
+  <div class="ch-sep"></div>
+  <div class="cta-wrap">
+    <div class="cta-title"><span class="g">公式LINE</span>を、<br><span class="mark">いますぐ追加</span></div>
+    <div class="cta-qr-box">
+      <div class="cta-qr"></div>
+      <div class="cta-side">
+        <div class="cta-line-lbl">ロレクエ 公式LINE</div>
+        <div class="cta-line-name">@rolequest</div>
+        <div class="cta-line-note">登録後、自動メッセージが届きます。<br>そのまま手順に従って、本日中にお手続きを。</div>
+      </div>
+    </div>
+    <div class="cta-tag">本日中の追加で、<span class="y">超スペシャル特典つき</span></div>
+  </div>
+  <div class="bot-strip"></div>
+  <div class="pg">068</div>
+</div>
+
+<!-- ===== SLIDE 70：最終締めメッセージ ===== -->
+<div class="slide">
+  <div class="final-wrap">
+    <div class="final-frame"></div>
+    <div class="final-corner" style="top:60px;left:60px;border-right:none;border-bottom:none;border-color:var(--y2)"></div>
+    <div class="final-corner" style="top:60px;right:60px;border-left:none;border-bottom:none;border-color:var(--y2)"></div>
+    <div class="final-corner" style="bottom:60px;left:60px;border-right:none;border-top:none;border-color:var(--y2)"></div>
+    <div class="final-corner" style="bottom:60px;right:60px;border-left:none;border-top:none;border-color:var(--y2)"></div>
+    <div class="final-pre">— THANK YOU —</div>
+    <div class="final-main">ロレクエの世界で、<br>お会いしましょう</div>
+    <div class="final-foot">
+      ここまで聞いてくれた、あなたとなら<br>
+      きっと、いい未来を作れると、運営は本気で思っています
+    </div>
+    <div class="final-badge">ROLE QUEST</div>
+  </div>
+  <div class="pg" style="color:var(--gm)">069</div>
+</div>
+
+</div>
+</body>
+</html>
